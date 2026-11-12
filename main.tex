@@ -1,0 +1,5594 @@
+\documentclass[
+  12pt,
+  a4paper,
+  oneside
+]{scrreprt}
+
+% =================================================
+% Sprache, Schrift und Kodierung
+% =================================================
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% =================================================
+% Seitenlayout
+% =================================================
+\usepackage[
+  left=2.7cm,
+  right=2.7cm,
+  top=2.7cm,
+  bottom=2.7cm
+]{geometry}
+
+\usepackage{setspace}
+\onehalfspacing
+
+% =================================================
+% Mathematik, Tabellen und Listen
+% =================================================
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{multirow}
+
+% =================================================
+% Gestaltung
+% =================================================
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  citecolor=black,
+  pdftitle={Zusammenfassung Werkstoff- und Materialkunde}
+}
+
+\titleformat{\chapter}
+  {\normalfont\Huge\bfseries}
+  {\thechapter.}
+  {0.7em}
+  {}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\thesection}
+  {0.7em}
+  {}
+
+\setlist[itemize]{
+  itemsep=0.35em,
+  topsep=0.35em
+}
+
+\setlist[enumerate]{
+  itemsep=0.35em,
+  topsep=0.35em
+}
+
+% =================================================
+% Eigene Befehle und Boxen
+% =================================================
+\newcommand{\quelle}[1]{\hfill\texttt{#1}}
+
+\newtcolorbox{merksatzbox}{
+  colback=gray!8,
+  colframe=black!60,
+  boxrule=0.6pt,
+  arc=1.5mm,
+  left=3mm,
+  right=3mm,
+  top=2mm,
+  bottom=2mm
+}
+
+\newtcolorbox{darstellungsbox}{
+  colback=blue!4,
+  colframe=blue!50!black,
+  boxrule=0.6pt,
+  arc=1.5mm,
+  left=3mm,
+  right=3mm,
+  top=2mm,
+  bottom=2mm
+}
+
+% =================================================
+% Beginn des Dokuments
+% =================================================
+\begin{document}
+
+% =================================================
+% Titelseite
+% =================================================
+\begin{titlepage}
+  \centering
+  \vspace*{3cm}
+
+  {\Huge\bfseries Werkstoff- und Materialkunde\par}
+  \vspace{0.5cm}
+  {\Large Zusammenfassung\par}
+
+  \vspace{1.5cm}
+
+  \begin{tcolorbox}[
+    colback=gray!8,
+    colframe=black!60,
+    width=0.88\textwidth,
+    arc=1.5mm
+  ]
+  Diese Zusammenfassung basiert ausschließlich auf dem bereitgestellten
+  Skriptum \textit{Werkstoffkunde 1 (1).pdf}. Die einzelnen Kapitel
+  werden in derselben fachlichen Reihenfolge wie im Skriptum ergänzt.
+  \end{tcolorbox}
+
+  \vfill
+
+  {\large LaTeX-Quelltext für eine PDF-Erstellung\par}
+  \vspace{0.5cm}
+  {\large \today\par}
+\end{titlepage}
+
+% =================================================
+% Inhaltsverzeichnis
+% =================================================
+\tableofcontents
+\clearpage
+
+% =================================================
+% KAPITEL 1: GRUNDLAGEN
+% =================================================
+\chapter{Grundlagen}
+
+\section{Werkstoffwahl im Bauwesen}
+
+Eine wesentliche Aufgabe von Ingenieurinnen und Ingenieuren besteht
+darin, für unterschiedliche Aufgaben den passenden Werkstoff
+auszuwählen. Voraussetzung für eine korrekte Auswahl ist die Kenntnis
+der verfügbaren Baustoffe und ihrer Eigenschaften. 
+
+Das Dokument behandelt unter anderem folgende Werk- und Baustoffe:
+
+\begin{itemize}
+  \item Holz und Holzwerkstoffe,
+  \item Gesteinskörnung,
+  \item Zement,
+  \item Beton,
+  \item metallische Werkstoffe,
+  \item Glas,
+  \item Asphalt,
+  \item Mauerwerk,
+  \item neue Materialien,
+  \item biobasierte und kreislauffähige Baustoffe.
+\end{itemize}
+
+
+
+Die Wahl eines Baustoffs hängt nicht nur von seinen physikalischen und
+mechanischen Eigenschaften ab. Auch ökonomische und ökologische
+Kriterien müssen berücksichtigt werden. In der Vergangenheit war zudem
+die Verfügbarkeit eines Baustoffs ein wesentliches Kriterium.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Die Auswahl eines Baustoffs beruht auf physikalischen, mechanischen,
+ökonomischen und ökologischen Kriterien. Zusätzlich ist die Kenntnis
+der verfügbaren Werkstoffe und ihrer Eigenschaften erforderlich.
+
+\end{merksatzbox}
+
+\section{Einteilung der Baustoffe}
+
+Baustoffe können grundsätzlich in anorganische und organische
+Werkstoffe eingeteilt werden. 
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.38\textwidth}
+  >{\raggedright\arraybackslash}p{0.38\textwidth}
+}
+\toprule
+\textbf{Anorganische Baustoffe} &
+\textbf{Organische Baustoffe} \\
+\midrule
+\endhead
+
+Naturstein &
+Holz \\
+
+Glas &
+Holzwerkstoffe \\
+
+Keramische Baustoffe &
+Bitumen \\
+
+Mörtel &
+Asphalt \\
+
+Beton &
+Faserverbundkunststoffe \\
+
+Lehm &
+Kunststoffe \\
+
+Gusseisen, Stahl und Aluminium &
+\\
+
+\bottomrule
+\end{longtable}
+
+
+
+Im Bauwesen werden Werkstoffe häufig kombiniert, weil jeder Baustoff
+unterschiedliche Vor- und Nachteile besitzt. Als Beispiel nennt das
+Dokument Stahlbeton: Beton übernimmt vor allem die Abtragung von
+Druckkräften, während die Betonstahlbewehrung die Zugkraftübertragung
+übernimmt. 
+
+\section{Kraft}
+
+Kraft ist eine wesentliche physikalische Größe. Nach dem zweiten
+Newton'schen Axiom ergibt sich die Kraft aus dem Produkt der Masse $m$
+und der Beschleunigung $a$:
+
+\begin{equation}
+  F = m \cdot a
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $F$: Kraft in $\mathrm{N}$,
+  \item $m$: Masse in $\mathrm{kg}$,
+  \item $a$: Beschleunigung in $\mathrm{m/s^2}$.
+\end{itemize}
+
+
+
+Neben Newton werden für größere Kräfte auch Kilonewton und Meganewton
+verwendet:
+
+\begin{align}
+  1\,\mathrm{kN} &= 10^3\,\mathrm{N}, \\
+  1\,\mathrm{MN} &= 10^6\,\mathrm{N}.
+\end{align}
+
+
+
+\section{Dichte}
+
+Die Dichte beschreibt, wie viel Masse in einem bestimmten Volumen
+enthalten ist. Sie wird mit dem Formelzeichen $\rho$ angegeben:
+
+\begin{equation}
+  \rho = \frac{m}{V}
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $\rho$: Dichte in $\mathrm{kg/m^3}$,
+  \item $m$: Masse in $\mathrm{kg}$,
+  \item $V$: Volumen in $\mathrm{m^3}$.
+\end{itemize}
+
+
+
+Je nach Berücksichtigung von Hohlräumen und Poren wird zwischen
+Reindichte, Rohdichte und Schüttdichte unterschieden.
+
+
+\subsection{Reindichte}
+
+Die Reindichte $\rho_0$ bezieht sich auf das Volumen eines Werkstoffs
+ohne Hohlräume:
+
+\begin{equation}
+  \rho_0 = \frac{m}{V_0}
+\end{equation}
+
+Dabei ist $V_0$ das Volumen des Werkstoffs ohne Hohlräume.
+
+
+\subsection{Rohdichte}
+
+Die Rohdichte $\rho_r$ berücksichtigt zusätzlich das Volumen der Poren:
+
+\begin{equation}
+  \rho_r = \frac{m}{V_0 + V_p}
+\end{equation}
+
+Dabei ist $V_p$ das Volumen der Luft- und Kapillarporen.
+
+
+\subsection{Schüttdichte}
+
+Die Schüttdichte $\rho_s$ berücksichtigt zusätzlich die Zwischenräume
+zwischen einzelnen Körnern eines Haufwerks:
+
+\begin{equation}
+  \rho_s = \frac{m}{V_0 + V_p + V_z}
+\end{equation}
+
+Dabei ist $V_z$ das Volumen der Zwischenräume.
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Reindichte, Rohdichte und Schüttdichte}
+
+Die Darstellung unterscheidet drei Bezugsvolumina:
+
+\begin{itemize}
+  \item Das Volumen eines vollständig porenfrei zerkleinerten Stoffes
+  bildet die Grundlage für die Reindichte.
+
+  \item Das Volumen eines einzelnen Korns einschließlich der Kornporen
+  bildet die Grundlage für die Rohdichte.
+
+  \item Das Volumen eines Prüfgefäßes mit einzelnen Körnern und
+  Haufwerksporen bildet die Grundlage für die Schüttdichte.
+\end{itemize}
+\end{darstellungsbox}
+
+\section{Zug und Druck}
+
+Eine Zugkraft erzeugt Zugspannungen. Eine Druckkraft erzeugt
+Druckspannungen. Die Zugspannung wird wie folgt berechnet:
+
+\begin{equation}
+  \sigma_Z = \frac{F}{A}
+\end{equation}
+
+Die Druckspannung wird mit negativem Vorzeichen angegeben:
+
+\begin{equation}
+  \sigma_D = -\frac{F}{A}
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $\sigma_Z$: Zugspannung in $\mathrm{N/mm^2}$,
+  \item $\sigma_D$: Druckspannung in $\mathrm{N/mm^2}$,
+  \item $F$: Zug- oder Druckkraft in $\mathrm{N}$,
+  \item $A$: belastete Querschnittsfläche in $\mathrm{mm^2}$.
+\end{itemize}
+
+
+
+Zugbeanspruchung führt zu einer Dehnung, Druckbeanspruchung zu einer
+Stauchung. Zusätzlich tritt normal zur Belastungsrichtung eine
+Querkontraktion auf. 
+
+Die Dehnung wird mit folgender Gleichung beschrieben:
+
+\begin{equation}
+  \varepsilon = \frac{\Delta l}{l_0}
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $\varepsilon$: Dehnung,
+  \item $\Delta l$: Längenänderung,
+  \item $l_0$: Ursprungslänge.
+\end{itemize}
+
+
+
+\section{Poisson'sche Zahl}
+
+Das Verhältnis der Querkontraktion zur Längenänderung ist bei
+elastischer Beanspruchung ein konstanter Werkstoffkennwert. Dieser
+Kennwert wird Poisson'sche Zahl $\mu$ genannt:
+
+\begin{equation}
+  \mu = \frac{\varepsilon_q}{\varepsilon}
+\end{equation}
+
+Die Poisson'sche Zahl liegt laut Dokument zwischen $0$ und $0{,}5$.
+Für Stahl wird ein Wert von $0{,}3$, für Beton ein Wert von $0{,}16$
+angegeben. 
+
+\section{Schubbeanspruchung}
+
+Scher- beziehungsweise Schubkräfte sind gegenparallel wirkende Kräfte,
+die auf eine parallele Fläche wirken. Sie erzeugen Schubspannungen.
+Die dadurch entstehende Verformung wird als Schiebung oder Scherung
+bezeichnet. 
+
+Die Schubspannung $\tau$ ergibt sich aus:
+
+\begin{equation}
+  \tau = \frac{F}{A}
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $\tau$: Schubspannung in $\mathrm{N/mm^2}$,
+  \item $F$: Schubkraft in $\mathrm{N}$,
+  \item $A$: Scherfläche in $\mathrm{mm^2}$.
+\end{itemize}
+
+Die Schiebung beziehungsweise Scherung kann beschrieben werden durch:
+
+\begin{equation}
+  \gamma = \frac{w}{l} = \tan(\vartheta)
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $\gamma$: Schiebung beziehungsweise Scherung,
+  \item $w$: Verschiebung in Richtung der Scherkraft,
+  \item $l$: Höhe des Körpers,
+  \item $\vartheta$: Scherwinkel.
+\end{itemize}
+
+
+
+\section{Biegung}
+
+Ein auf Biegung beanspruchter Werkstoff muss ein Biegemoment aufnehmen.
+Dieses verursacht Biegespannungen. Die Ermittlung der Biegespannungen
+und Biegeverformungen hängt von der Belastungsart sowie vom statischen
+System ab. 
+
+Das Dokument unterscheidet insbesondere den Drei-Punkt- und den
+Vier-Punkt-Biegeversuch:
+
+\begin{itemize}
+  \item Beim \textbf{Drei-Punkt-Biegeversuch} wirkt eine Einzellast in
+  der Mitte des Prüfkörpers. Das maximale Moment und die maximale
+  Spannung treten an einem Punkt auf.
+
+  \item Beim \textbf{Vier-Punkt-Biegeversuch} wirken zwei Lasten im
+  Feld. Zwischen diesen beiden Lasten ist das Moment konstant.
+\end{itemize}
+
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Drei-Punkt- und Vier-Punkt-Biegeversuch}
+
+Beim Drei-Punkt-Biegeversuch liegt ein Prüfkörper auf zwei Lagern und
+wird in der Mitte durch eine einzelne Last belastet.
+
+Beim Vier-Punkt-Biegeversuch liegt der Prüfkörper ebenfalls auf zwei
+Lagern. Zusätzlich wirken zwei Lasten im Feld. Dadurch entsteht
+zwischen den beiden Lasten ein Bereich mit konstantem Biegemoment.
+\end{darstellungsbox}
+
+\section{Ökologische Eigenschaften von Baustoffen}
+
+Das Dokument behandelt ökologische Eigenschaften von Baustoffen unter
+anderem anhand der Lebenszyklusanalyse sowie anhand ausgewählter
+Umwelteinwirkungen. 
+
+Für Holz wird ein negatives Treibhausgaspotenzial in der Herstellung
+angeführt. Dies wird auf die Kohlendioxidspeicherfähigkeit des Holzes
+zurückgeführt. Bei Betrachtung des gesamten Lebenszyklus kann sich
+diese Bewertung jedoch relativieren. 
+
+Der Einsatz von Klebstoffen führt bei keilgezinktem Holz und
+Brettschichtholz zu höheren Werten für Ozonabbaupotenzial und
+nicht-erneuerbaren Primärenergiebedarf als bei Vollholz ohne
+Keilzinkung. 
+
+Mauerziegel besitzt laut Dokument ein vergleichbares
+Treibhausgaspotenzial und Ozonabbaupotenzial wie Beton der
+Festigkeitsklasse C20/25. Der nicht-erneuerbare Primärenergiebedarf
+von Mauerziegeln wird jedoch als doppelt so hoch angegeben.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Die Umwelteinwirkungen von Baustoffen sind nicht allein anhand von
+Masse oder Volumen vergleichbar. Laut Dokument kann die Einbeziehung
+von Werkstoffeigenschaften wie Festigkeiten die Bewertung der
+Umwelteinwirkungen relativieren. 
+\end{merksatzbox}
+
+% =================================================
+% HIER WERDEN DIE NÄCHSTEN KAPITEL EINGEFÜGT:
+%
+% Kapitel 2: Beton
+% Kapitel 3: Bindemittel und Zement
+% Kapitel 4: Gestein, Naturwerkstein und Gesteinskörnung
+% Kapitel 5: Metallische Werkstoffe
+% Kapitel 6: Glas
+% Kapitel 7: Holz und Holzwerkstoffe
+% Kapitel 8: Asphalt und Straßenbau
+% Kapitel 9: Mauerwerk
+% Kapitel 10: Neue, biobasierte und kreislauffähige Materialien
+% =================================================
+% =================================================
+% KAPITEL 2: BETON
+% Diesen gesamten Block vor \end{document} einfügen.
+% =================================================
+
+\chapter{Beton}
+
+\section{Definition und Zusammensetzung}
+
+Beton ist ein erhärtetes Gemisch aus Zement, grober und feiner
+Gesteinskörnung sowie Wasser. Zusatzmittel und Zusatzstoffe können
+dem Beton zusätzlich beigegeben werden. Beton zählt weltweit neben
+Lehm zu den am häufigsten verwendeten Baustoffen.
+
+
+Die im Dokument behandelten Bestandteile des Betons sind:
+
+\begin{itemize}
+  \item Zement,
+  \item Gesteinskörnung,
+  \item Zugabewasser,
+  \item Luftporen,
+  \item Zusatzstoffe,
+  \item Zusatzmittel.
+\end{itemize}
+
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Beton ist ein erhärtetes Gemisch aus Zement, grober und feiner
+Gesteinskörnung sowie Wasser. Zusatzmittel und Zusatzstoffe können
+zusätzlich enthalten sein.
+
+\end{merksatzbox}
+
+\section{Wasser-Bindemittel-Wert}
+
+Der Wasser-Bindemittel-Wert, kurz W/B-Wert, beschreibt das Verhältnis
+zwischen der Masse des Wassers und der Masse des Bindemittels.
+
+\begin{equation}
+  \text{W/B-Wert}
+  =
+  \frac{\text{Masse Wasser}}{\text{Masse Bindemittel}}
+\end{equation}
+
+
+
+Für die vollständige Hydratation des Zements wird ein W/B-Wert von
+$0{,}4$ angegeben. Bei einem W/B-Wert von mehr als $0{,}4$ bleibt
+Wasser in Kapillarporen zurück. Dies führt zu einer geringeren
+Festigkeit, Beständigkeit, Dichtheit und einem geringeren
+Korrosionsschutz.
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Einfluss des W/B-Werts}
+
+Mit zunehmendem Wasser-Bindemittel-Wert nimmt die Betonfestigkeit ab.
+Gleichzeitig nimmt der Anteil an Kapillarporen zu. Ein W/B-Wert von
+mehr als $0{,}4$ führt laut Dokument dazu, dass Wasser in
+Kapillarporen zurückbleiben kann.
+\end{darstellungsbox}
+
+\section{Frischbeton}
+
+Frischbeton ist Beton vor dem Erhärten. Zu den im Dokument behandelten
+Eigenschaften des Frischbetons zählen:
+
+\begin{itemize}
+  \item Frischbetonrohdichte,
+  \item Konsistenz,
+  \item Luftporengehalt,
+  \item Wärmeentwicklung beim Abbinden.
+\end{itemize}
+
+
+
+\subsection{Frischbetonrohdichte}
+
+Zur Bestimmung der Frischbetonrohdichte wird Frischbeton in einem
+biegesteifen und wasserdichten Behälter verdichtet und gewogen. Die
+Rohdichte wird aus Masse und Volumen ermittelt:
+
+\begin{equation}
+  \rho = \frac{m}{V}
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $\rho$: Rohdichte,
+  \item $m$: Masse,
+  \item $V$: Volumen.
+\end{itemize}
+
+Die Rohdichte hängt hauptsächlich von der Gesteinskörnung und zusätzlich
+vom Luftporengehalt ab. Für Beton wird eine durchschnittliche Dichte
+von ungefähr
+
+\begin{equation}
+  2400\,\mathrm{kg/m^3}
+\end{equation}
+
+angegeben.
+
+
+\subsection{Konsistenz}
+
+Die Konsistenz beschreibt die Verarbeitbarkeit von Frischbeton. Für
+steifere Konsistenzklassen wird das Verdichtungsmaß bestimmt.
+
+\begin{equation}
+  C = \frac{h_1}{h}
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $C$: Verdichtungsmaß,
+  \item $h_1$: Höhe des lose eingefüllten Betons,
+  \item $h$: Höhe des verdichteten Betons.
+\end{itemize}
+
+
+
+Für dünnflüssigere Konsistenzklassen wird das Ausbreitmaß verwendet.
+Dabei wird Frischbeton auf einem Ausbreittisch geprüft. Nach dem
+Anheben und Fallenlassen des Tisches werden zwei Durchmesser des
+Betonkuchens gemessen.
+
+\begin{equation}
+  F = \frac{d_1 + d_2}{2}
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $F$: Ausbreitmaß,
+  \item $d_1$: erster gemessener Durchmesser,
+  \item $d_2$: zweiter gemessener Durchmesser.
+\end{itemize}
+
+
+
+\subsection{Luftporengehalt}
+
+Der Luftporengehalt von Frischbeton wird mit einem Luftporentopf
+ermittelt. Als übliche Luftporengehalte werden Werte von
+
+\begin{equation}
+  1 \text{ bis } 2\,\mathrm{Vol.\%}
+\end{equation}
+
+angegeben.
+
+
+\subsection{Wärmeentwicklung beim Abbinden}
+
+Beim Abbinden von Beton entsteht Wärme. Diese Wärmeentwicklung ist
+insbesondere bei massigen Bauteilen von Bedeutung, weil
+Temperaturrisse vermieden werden sollen.
+
+
+Die maximale Betontemperatur im Anlieferzustand beträgt laut Dokument:
+
+\begin{equation}
+  27\,^\circ\mathrm{C}
+\end{equation}
+
+Für Beton der Weißen Wanne wird eine maximale Temperatur von
+
+\begin{equation}
+  22\,^\circ\mathrm{C}
+\end{equation}
+
+angegeben.
+
+
+\section{Festbeton}
+
+Nach dem Erhärten wird Beton als Festbeton bezeichnet. Die
+Eigenschaften des Festbetons umfassen laut Dokument insbesondere:
+
+\begin{itemize}
+  \item Druckfestigkeit,
+  \item Zugfestigkeit,
+  \item elastische Verformung beziehungsweise E-Modul.
+\end{itemize}
+
+
+
+\subsection{Druckfestigkeit}
+
+Beton kann vor allem Druckspannungen aufnehmen. Die Einteilung von
+Beton erfolgt unter anderem anhand von Druckfestigkeitsklassen. Die
+Druckfestigkeit wird an Prüfkörpern bestimmt und bezieht sich auf ein
+Betonalter von 28 Tagen.
+
+
+Als Beispiel für eine Betonbezeichnung wird angeführt:
+
+\begin{center}
+\texttt{C25/30 XC3/XD2/XF3/XA1L/SB}
+\end{center}
+
+Dabei bezeichnet \texttt{C25/30} die Druckfestigkeitsklasse. Die
+weiteren Kürzel bezeichnen Expositionsklassen. \texttt{SB} wird als
+Betonanwendung Sichtbeton angeführt.
+
+
+\subsection{Elastizitätsmodul von Beton}
+
+Der Elastizitätsmodul beschreibt den Zusammenhang zwischen Spannung und
+Dehnung. Er ist ein Maß für den Widerstand eines Werkstoffs gegen
+elastische Verformung.
+
+
+Der statische Elastizitätsmodul des Betons wird mit folgender Beziehung
+ermittelt:
+
+\begin{equation}
+  E_b =
+  \frac{\sigma_a - \sigma_b}
+  {\varepsilon_a - \varepsilon_b}
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $E_b$: statischer Elastizitätsmodul,
+  \item $\sigma_a$: obere Spannung,
+  \item $\sigma_b$: untere Spannung,
+  \item $\varepsilon_a$: mittlere Dehnung unter $\sigma_a$,
+  \item $\varepsilon_b$: mittlere Dehnung unter $\sigma_b$.
+\end{itemize}
+
+
+
+Für Konstruktionsbeton soll der E-Modul groß sein, damit die
+Verformungen klein bleiben. Für Betonstraßen und Massenbeton soll der
+E-Modul eher niedrig sein, um hohe Spannungen bei auftretenden
+Dehnungen zu vermeiden.
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Prüfung des E-Moduls}
+
+Zur Bestimmung des E-Moduls wird ein Prüfkörper in eine Druckpresse
+eingespannt. Verformungsmessgeräte erfassen die auftretenden Dehnungen.
+Anschließend wird ein Belastungszyklus durchgeführt. Der E-Modul wird
+aus dem Spannungs-Dehnungs-Verhalten berechnet.
+\end{darstellungsbox}
+
+\section{Expositionsklassen}
+
+Expositionsklassen sind ein zentrales Werkzeug der EN~206-1. Sie
+definieren Angriffsrisiken durch Umwelteinflüsse. Die
+Mindestanforderungen in Abhängigkeit vom Risiko werden in
+ÖNORM~B~4710-1 beschrieben.
+
+
+\begin{longtable}{
+  >{\centering\arraybackslash}p{0.18\textwidth}
+  >{\raggedright\arraybackslash}p{0.56\textwidth}
+}
+\toprule
+\textbf{Klasse} & \textbf{Bedeutung} \\
+\midrule
+\endhead
+
+X0 & kein Angriffsrisiko \\
+
+XC & Korrosion durch Karbonatisierung \\
+
+XD & Chloride, beispielsweise durch Taumittel \\
+
+XS & Meerwasser \\
+
+XF & Frost und Frost-Tausalz \\
+
+XA & chemischer Angriff \\
+
+XM & Verschleiß beziehungsweise mechanischer Abrieb \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\subsection{Karbonatisierung}
+
+Beton besitzt einen pH-Wert von ungefähr 12. Dadurch wird
+Bewehrungsstahl durch eine Passivierungsschicht geschützt. Durch
+Karbonatisierung sinkt der pH-Wert. Dadurch kann die Bewehrung zu
+rosten beginnen.
+
+
+Die im Dokument angeführte Reaktion lautet:
+
+\begin{equation}
+  \mathrm{
+  Ca(OH)_2 + H_2O + CO_2
+  \rightarrow
+  CaCO_3 + H_2O
+  }
+\end{equation}
+
+Die Karbonatisierungstiefe kann mit dem pH-Indikator Phenolphthalein
+überprüft werden.
+
+
+\section{Stoffraumrechnung}
+
+Die Stoffraumrechnung dient der rechnerischen Bestimmung der
+Zusammensetzung von $1\,\mathrm{m^3}$ Frischbeton.
+
+\begin{equation}
+  1000 =
+  \frac{z}{\rho_z}
+  +
+  \frac{f}{\rho_f}
+  +
+  \frac{w}{\rho_w}
+  +
+  \frac{g}{\rho_g}
+  +
+  p
+  \qquad [\mathrm{dm^3/m^3}]
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{longtable}{
+  >{\centering\arraybackslash}p{0.15\textwidth}
+  >{\raggedright\arraybackslash}p{0.56\textwidth}
+}
+\toprule
+\textbf{Symbol} & \textbf{Bedeutung} \\
+\midrule
+\endhead
+
+$z$ & Zementgehalt in $\mathrm{kg/m^3}$ \\
+
+$\rho_z$ & Dichte des Zements in $\mathrm{kg/dm^3}$ \\
+
+$f$ & Zusatzstoffgehalt in $\mathrm{kg/m^3}$ \\
+
+$\rho_f$ & Dichte des Zusatzstoffs in $\mathrm{kg/dm^3}$ \\
+
+$w$ & Wassergehalt in $\mathrm{kg/m^3}$ \\
+
+$\rho_w$ & Dichte des Wassers in $\mathrm{kg/dm^3}$ \\
+
+$g$ & Gehalt der Gesteinskörnung in $\mathrm{kg/m^3}$ \\
+
+$\rho_g$ & Rohdichte der Gesteinskörnung in $\mathrm{kg/dm^3}$ \\
+
+$p$ & Porenvolumen in $\mathrm{dm^3/m^3}$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Betonherstellung}
+
+Beton wird großtechnisch in Betonmischanlagen hergestellt. Als
+Bestandteile einer Betonmischanlage werden genannt:
+
+\begin{itemize}
+  \item Lagereinrichtung für Gesteinskörnung,
+  \item Zementsilo,
+  \item Zugabeeinrichtung für Betonzusatzmittel,
+  \item Steuerungstechnik,
+  \item Dosiereinrichtungen,
+  \item Betonmischer,
+  \item Übergabeeinrichtung für Frischbeton an einen LKW.
+\end{itemize}
+
+
+
+\section{Einbau, Verdichtung und Nachbehandlung}
+
+Die freie Fallhöhe beim Betonieren darf maximal
+
+\begin{equation}
+  1{,}5\,\mathrm{m}
+\end{equation}
+
+betragen, da es sonst zu einer Entmischung kommen kann.
+
+
+Als Verdichtungsverfahren nennt das Dokument:
+
+\begin{itemize}
+  \item Innenrüttler,
+  \item Schalungsrüttler,
+  \item Oberflächenrüttler wie Rüttelbohlen und Rüttelplatten.
+\end{itemize}
+
+
+
+Ab der Konsistenzklasse F66 ist laut Dokument keine Verdichtung mehr
+erforderlich.
+
+
+Die Nachbehandlung schützt Beton vor vorzeitigem Austrocknen, starken
+Temperaturveränderungen und Rissbildung. Als Maßnahmen werden Folien
+und Matten genannt.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Verdichtung und Nachbehandlung sind wesentliche Schritte für die
+Betonqualität. Die Nachbehandlung schützt insbesondere vor vorzeitigem
+Austrocknen, starken Temperaturänderungen und Rissbildung.
+
+\end{merksatzbox}
+% =================================================
+% KAPITEL 3: BINDEMITTEL UND ZEMENT
+% Diesen gesamten Block vor \end{document} einfügen.
+% =================================================
+
+\chapter{Bindemittel und Zement}
+
+\section{Bindemittel im Beton}
+
+Bindemittel verbinden die einzelnen Bestandteile eines Baustoffs.
+Im Beton übernimmt Zement die Funktion des Bindemittels. Beton besteht
+aus Zement, Gesteinskörnung, Wasser sowie gegebenenfalls Zusatzmitteln
+und Zusatzstoffen. 
+
+Der Wasser-Bindemittel-Wert beschreibt das Verhältnis von Wasser zu
+Bindemittel:
+
+\begin{equation}
+  \text{W/B-Wert}
+  =
+  \frac{\text{Masse Wasser}}
+  {\text{Masse Bindemittel}}
+\end{equation}
+
+Zusatzstoffe dürfen laut Dokument nicht immer vollständig auf den
+Bindemittelgehalt angerechnet werden. Dafür wird ein $k$-Faktor
+verwendet:
+
+\begin{equation}
+  B =
+  \text{Zement}
+  +
+  k \cdot \text{Zusatzstoff}
+\end{equation}
+
+Dabei ist $B$ der anrechenbare Bindemittelgehalt.
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.38\textwidth}
+  >{\centering\arraybackslash}p{0.24\textwidth}
+}
+\toprule
+\textbf{Zusatzstoff} & \textbf{$k$-Faktor} \\
+\midrule
+\endhead
+
+Flugasche & $0{,}8$ \\
+
+Hüttensand & $0{,}8$ \\
+
+Silicastaub & $2{,}0$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Der anrechenbare Bindemittelgehalt setzt sich aus Zement und dem mit
+einem $k$-Faktor gewichteten Zusatzstoff zusammen. Für Flugasche und
+Hüttensand gilt laut Dokument $k=0{,}8$, für Silicastaub $k=2{,}0$.
+
+\end{merksatzbox}
+
+\section{Normfestigkeitsklassen von Zement}
+
+Die Normfestigkeitsklassen von Zement beziehen sich auf die
+Druckfestigkeit nach 28 Tagen. Das Dokument nennt die
+Normfestigkeitsklassen:
+
+\begin{itemize}
+  \item $32{,}5\,\mathrm{N/mm^2}$,
+  \item $42{,}5\,\mathrm{N/mm^2}$,
+  \item $52{,}5\,\mathrm{N/mm^2}$.
+\end{itemize}
+
+
+
+Zusätzlich wird die Anfangsfestigkeit unterschieden:
+
+\begin{itemize}
+  \item \texttt{N}: normale Anfangsfestigkeit,
+  \item \texttt{R}: hohe beziehungsweise rapide Anfangsfestigkeit.
+\end{itemize}
+
+
+
+\begin{longtable}{
+  >{\centering\arraybackslash}p{0.14\textwidth}
+  >{\centering\arraybackslash}p{0.24\textwidth}
+  >{\centering\arraybackslash}p{0.22\textwidth}
+  >{\centering\arraybackslash}p{0.19\textwidth}
+}
+\toprule
+\textbf{Festigkeitsklasse} &
+\textbf{Anfangsfestigkeit} &
+\textbf{Normfestigkeit nach 28 Tagen} &
+\textbf{Erstarrungsbeginn} \\
+\midrule
+\endhead
+
+32,5 N &
+mindestens $16{,}0\,\mathrm{N/mm^2}$ nach 7 Tagen &
+mindestens $32{,}5\,\mathrm{N/mm^2}$ &
+mindestens $75\,\mathrm{min}$ \\
+
+32,5 R &
+mindestens $10{,}0\,\mathrm{N/mm^2}$ nach 2 Tagen &
+mindestens $32{,}5\,\mathrm{N/mm^2}$ &
+mindestens $75\,\mathrm{min}$ \\
+
+42,5 N &
+mindestens $10{,}0\,\mathrm{N/mm^2}$ nach 2 Tagen &
+mindestens $42{,}5\,\mathrm{N/mm^2}$ &
+mindestens $60\,\mathrm{min}$ \\
+
+42,5 R &
+mindestens $20{,}0\,\mathrm{N/mm^2}$ nach 2 Tagen &
+mindestens $42{,}5\,\mathrm{N/mm^2}$ &
+mindestens $60\,\mathrm{min}$ \\
+
+52,5 N &
+mindestens $20{,}0\,\mathrm{N/mm^2}$ nach 2 Tagen &
+mindestens $52{,}5\,\mathrm{N/mm^2}$ &
+mindestens $45\,\mathrm{min}$ \\
+
+52,5 R &
+mindestens $30{,}0\,\mathrm{N/mm^2}$ nach 2 Tagen &
+mindestens $52{,}5\,\mathrm{N/mm^2}$ &
+mindestens $45\,\mathrm{min}$ \\
+
+\bottomrule
+\end{longtable}
+
+Die Tabelle beschreibt Anfangs- und Normfestigkeiten von Zement nach
+ÖNORM EN 197-1. 
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Die Normfestigkeit von Zement bezieht sich auf die Druckfestigkeit nach
+28 Tagen. Das Kürzel \texttt{N} steht für normale Anfangsfestigkeit,
+während \texttt{R} eine hohe beziehungsweise rapide Anfangsfestigkeit
+bezeichnet. 
+\end{merksatzbox}
+
+\section{Mahlfeinheit und Erhärtungsgeschwindigkeit}
+
+Die Erhärtungsgeschwindigkeit von Zement hängt laut Dokument
+insbesondere von der Mahlfeinheit ab. Je feiner ein Zement gemahlen
+ist, desto größer ist seine Oberfläche und desto reaktiver ist er.
+
+
+Die spezifische Oberfläche wird mit dem Blaine-Wert in
+$\mathrm{cm^2/g}$ beschrieben.
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.44\textwidth}
+  >{\centering\arraybackslash}p{0.30\textwidth}
+}
+\toprule
+\textbf{Material} &
+\textbf{Spezifische Oberfläche} \\
+\midrule
+\endhead
+
+Standardzement &
+ca.\ $3500\,\mathrm{cm^2/g}$ \\
+
+Frühhochfester Zement &
+ca.\ $5000\,\mathrm{cm^2/g}$ \\
+
+Mikrosilika &
+ca.\ $200000\,\mathrm{cm^2/g}$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Festigkeitsentwicklung von Zement}
+
+Die Darstellung unterscheidet die Anfangserhärtung sowie die Erhärtung
+und Nacherhärtung. Sie zeigt einen Verlauf für frühfesten Beton und
+einen Verlauf für normalerhärtenden Beton.
+
+Frühfester Beton erreicht in der frühen Phase schneller eine höhere
+Festigkeit. Die 28-Tage-Festigkeit bleibt jedoch der maßgebende Wert
+für die Zuordnung zur Normfestigkeitsklasse.
+\end{darstellungsbox}
+
+\section{Zementbezeichnung}
+
+Die vollständige Bezeichnung eines Zements enthält laut Dokument:
+
+\begin{itemize}
+  \item die Norm,
+  \item den Zementtyp beziehungsweise die Zusammensetzung,
+  \item die Druckfestigkeitsklasse,
+  \item die Frühfestigkeit.
+\end{itemize}
+
+
+
+Als Beispiel wird folgende vollständige Zementbezeichnung angegeben:
+
+\begin{center}
+\texttt{EN 197-1 -- CEM II/A-S 32,5 R}
+\end{center}
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.28\textwidth}
+  >{\raggedright\arraybackslash}p{0.52\textwidth}
+}
+\toprule
+\textbf{Bestandteil} &
+\textbf{Bedeutung} \\
+\midrule
+\endhead
+
+\texttt{EN 197-1} &
+Norm \\
+
+\texttt{CEM II/A-S} &
+Zementtyp; Kennzeichnung für Zusammensetzung und Zumahlstoffe \\
+
+\texttt{32,5} &
+Druckfestigkeitsklasse \\
+
+\texttt{R} &
+hohe beziehungsweise rapide Anfangsfestigkeit \\
+
+\bottomrule
+\end{longtable}
+
+
+
+Für Zumahlstoffe werden im Dokument folgende Kennbuchstaben genannt:
+
+\begin{longtable}{
+  >{\centering\arraybackslash}p{0.20\textwidth}
+  >{\raggedright\arraybackslash}p{0.50\textwidth}
+}
+\toprule
+\textbf{Kennbuchstabe} &
+\textbf{Zumahlstoff} \\
+\midrule
+\endhead
+
+S & Hüttensand \\
+
+V & Flugasche \\
+
+L & Kalkstein \\
+
+M & Kombination von Zumahlstoffen \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Normenmörtel}
+
+Zur Prüfung von Zement wird ein Normenmörtel hergestellt. Die im
+Dokument angegebene Zusammensetzung lautet:
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.42\textwidth}
+  >{\centering\arraybackslash}p{0.26\textwidth}
+}
+\toprule
+\textbf{Bestandteil} &
+\textbf{Masse} \\
+\midrule
+\endhead
+
+Wasser &
+$225\,\mathrm{g}$ \\
+
+Zement &
+$450\,\mathrm{g}$ \\
+
+Normensand &
+$1350\,\mathrm{g}$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+Der Normenmörtel wird in Formen mit folgenden Abmessungen eingefüllt:
+
+\begin{equation}
+  40 \times 40 \times 160\,\mathrm{mm}
+\end{equation}
+
+Die Prüfkörper werden verdichtet und abgestrichen. 
+
+\section{Lagerung der Zementprüfkörper}
+
+Die Lagerung der Zementprüfkörper erfolgt laut Dokument in zwei
+Schritten:
+
+\begin{enumerate}
+  \item Zunächst werden die Prüfkörper 24 Stunden lang in einem
+  Feuchtschrank bei $20\,^\circ\mathrm{C}$ und $90\,\%$ relativer
+  Feuchte gelagert.
+
+  \item Anschließend werden die Prüfkörper bis zum Alter von 28 Tagen
+  in einem Wasserbecken gelagert.
+\end{enumerate}
+
+
+
+\section{Festigkeitsprüfung von Zement}
+
+Nach 28 Tagen erfolgt die Festigkeitsprüfung des Normenmörtels. Das
+Dokument nennt folgende Prüfungen:
+
+\begin{itemize}
+  \item Biegezugfestigkeitsprüfung im Drei- oder
+  Vier-Punkt-Biegeversuch,
+  \item Druckfestigkeitsprüfung im Druckversuch.
+\end{itemize}
+
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Ablauf der Zementprüfung}
+
+Die Zementprüfung umfasst folgende Schritte:
+
+\begin{enumerate}
+  \item Herstellung des Normenmörtels aus Wasser, Zement und
+  Normensand;
+  \item Einfüllen in Formen mit den Abmessungen
+  $40 \times 40 \times 160\,\mathrm{mm}$;
+  \item Verdichten und Abstreichen;
+  \item Lagerung für 24 Stunden im Feuchtschrank bei
+  $20\,^\circ\mathrm{C}$ und $90\,\%$ relativer Feuchte;
+  \item Lagerung im Wasserbecken bis zum Alter von 28 Tagen;
+  \item Biegezug- und Druckfestigkeitsprüfung.
+\end{enumerate}
+\end{darstellungsbox}
+
+\section{Zusammenfassung}
+
+Zement ist das Bindemittel im Beton. Seine maßgeblichen Eigenschaften
+werden unter anderem durch die Normfestigkeitsklasse, die
+Anfangsfestigkeit, die Mahlfeinheit und die Zusammensetzung bestimmt.
+Die Zementprüfung erfolgt anhand eines genormten Mörtels und bewertet
+insbesondere Biegezug- und Druckfestigkeit nach 28 Tagen.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Für die Zementprüfung wird ein Normenmörtel aus $225\,\mathrm{g}$
+Wasser, $450\,\mathrm{g}$ Zement und $1350\,\mathrm{g}$ Normensand
+hergestellt. Die Prüfkörper werden bis zum Alter von 28 Tagen gelagert
+und anschließend auf Biegezug- und Druckfestigkeit geprüft.
+
+\end{merksatzbox}
+% =================================================
+% KAPITEL 4: GESTEIN, NATURWERKSTEIN
+% UND GESTEINSKÖRNUNG
+% Diesen gesamten Block vor \end{document} einfügen.
+% =================================================
+
+\chapter{Gestein, Naturwerkstein und Gesteinskörnung}
+
+\section{Bedeutung von Gestein im Bauwesen}
+
+Gestein und Gesteinskörnung sind bedeutende Baustoffe im Hochbau,
+Tiefbau und Straßenbau. Sie werden unter anderem als Bestandteil von
+Beton, Asphalt, ungebundenen Tragschichten und gebundenen
+Tragschichten eingesetzt. 
+
+Gesteinskörnungen werden außerdem mit Bindemitteln verkittet und für
+Beton oder Asphalt verwendet. Die Einhaltung normativer Anforderungen
+dient dazu, hochwertige und dauerhafte Gesteinskörnung bereitzustellen.
+
+
+Im Straßenbau werden Gesteinskörnungen beispielsweise für Asphalt,
+Beton, ungebundene Tragschichten und Frostschutzschichten benötigt.
+Beim Bau der Umfahrung Wieselburg B25 wurden laut Dokument unter
+anderem Gesteinskörnungen, Bindemittel und Beton eingesetzt.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Gesteinskörnung ist ein wesentlicher Bestandteil von Beton, Asphalt,
+gebundenen Tragschichten und ungebundenen Tragschichten. Ihre
+Eigenschaften beeinflussen die Dauerhaftigkeit und die
+Gebrauchseigenschaften des jeweiligen Baustoffs.
+
+\end{merksatzbox}
+
+\section{Naturwerkstein}
+
+Naturwerkstein wird als natürlicher Baustoff eingesetzt. Im
+bereitgestellten Dokument wird Gestein unter anderem im Zusammenhang
+mit Naturwerkstein und Gesteinskörnung behandelt. Naturwerkstein kann
+im Bauwesen beispielsweise für Bauwerke, Stützkonstruktionen,
+Pflasterungen oder andere Anwendungen aus massivem Gestein verwendet
+werden.
+
+Für Bauvorhaben sind die Eigenschaften des anstehenden Gesteins von
+besonderer Bedeutung. Im Zusammenhang mit dem Beispiel der Umfahrung
+Wieselburg B25 werden unter anderem Einschnitte in Festgestein,
+Wasserverhältnisse, die Fundierung einer Wildbrücke und die Fundierung
+von Hochspannungsmasten genannt. 
+
+Die Eignung eines Gesteins für eine Anwendung hängt insbesondere von
+seiner Dauerhaftigkeit, seiner Korn- beziehungsweise Gefügeeigenschaft
+und seiner Widerstandsfähigkeit gegen Beanspruchungen ab.
+
+
+\section{Gesteinskörnung}
+
+Gesteinskörnung kann aus natürlichen, industriell hergestellten oder
+rezyklierten Materialien bestehen. Für ungebundene Tragschichten werden
+Gemische aus natürlichen, industriell hergestellten und rezyklierten
+Gesteinskörnungen verwendet. 
+
+Gesteinskörnungen müssen unter anderem folgende Anforderungen erfüllen:
+
+\begin{itemize}
+  \item ausreichender Haftverbund mit Zementstein beziehungsweise
+  Bitumen;
+  \item keine schädlichen Verbindungen mit Zement, beispielsweise
+  durch Sulfate;
+  \item Gewährleistung der Beständigkeit von Beton oder Asphalt;
+  \item keine Beeinträchtigung des Korrosionsschutzes der
+  Betonbewehrung.
+\end{itemize}
+
+
+
+\section{Geometrische Anforderungen}
+
+Die geometrischen Anforderungen an Gesteinskörnung betreffen
+insbesondere:
+
+\begin{itemize}
+  \item Korngrößenverteilung beziehungsweise Sieblinie;
+  \item Größtkorn;
+  \item Feinanteile kleiner oder gleich $0{,}063\,\mathrm{mm}$;
+  \item Kornform;
+  \item Kornoberfläche;
+  \item Anteil gebrochener oder gerundeter Körner.
+\end{itemize}
+
+
+
+Eine Korngruppe wird als Kornfraktion $d/D$ mit Unter- beziehungsweise
+Überkorn bezeichnet. Ein Korngemisch ist ein natürliches Gemisch
+$0/D$ oder ein Gemisch aus mehreren Korngruppen.
+
+
+Dabei gilt:
+
+\begin{itemize}
+  \item $d$ ist der untere, eine Körnung beschreibende Durchmesser;
+  \item $D$ ist der obere, eine Körnung beschreibende Durchmesser.
+\end{itemize}
+
+
+
+\section{Korngrößenverteilung und Sieblinie}
+
+Die Korngrößenverteilung wird mit einem Siebverfahren nach
+ÖNORM EN 933-1 bestimmt. Das Ergebnis wird als Sieblinie dargestellt.
+
+
+Die Sieblinie zeigt den prozentuellen Durchgang einer Gesteinskörnung
+durch unterschiedliche Siebe. Sie dient dazu, die Verteilung der
+Korngrößen zu beurteilen und mit einem vorgegebenen
+Sieblinienbereich zu vergleichen.
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Sieblinie einer Gesteinskörnung}
+
+Die Darstellung zeigt auf der horizontalen Achse die Siebgröße in
+Millimetern. Auf der vertikalen Achse ist der Siebdurchgang in Prozent
+dargestellt.
+
+Eine rote Linie stellt die Sieblinie einer Gesteinskörnung dar. Blaue
+Begrenzungslinien zeigen einen vorgegebenen zulässigen
+Sieblinienbereich. Als Beispiel ist ein Korngemisch $0/32$ dargestellt.
+
+Die dargestellten Siebgrößen reichen von $0{,}063\,\mathrm{mm}$ über
+$0{,}2\,\mathrm{mm}$, $0{,}63\,\mathrm{mm}$, $2\,\mathrm{mm}$,
+$6{,}3\,\mathrm{mm}$ und $20\,\mathrm{mm}$ bis
+$63\,\mathrm{mm}$.
+\end{darstellungsbox}
+
+\section{Feinanteile}
+
+Als Feinanteile werden Körner mit einer Korngröße von höchstens
+
+\begin{equation}
+  0{,}063\,\mathrm{mm}
+\end{equation}
+
+bezeichnet. 
+
+Die Kategorie \texttt{f3} bedeutet, dass der Feinanteil kleiner oder
+gleich $0{,}063\,\mathrm{mm}$ höchstens
+
+\begin{equation}
+  3\,\mathrm{M.\%}
+\end{equation}
+
+beträgt. 
+
+\section{Kornform}
+
+Die Kornform wird mit der Kornformkennzahl \texttt{SI} beschrieben.
+Die Bestimmung erfolgt mit dem Shape Index nach ÖNORM EN 933-4.
+Dabei wird der Anteil nicht-kubischer Körner mit einem Verhältnis von
+Länge zu Breite von mehr als drei erfasst. 
+
+Die Kategorie \texttt{SI20} bedeutet, dass der Masseanteil schlecht
+geformter Körner höchstens
+
+\begin{equation}
+  20\,\%
+\end{equation}
+
+beträgt. 
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Die Kornform beeinflusst die Eigenschaften einer Gesteinskörnung. Mit
+dem Shape Index wird insbesondere der Anteil nicht-kubischer Körner
+bestimmt. Die Kategorie \texttt{SI20} begrenzt den Anteil schlecht
+geformter Körner auf maximal $20\,\%$.
+
+\end{merksatzbox}
+
+\section{Bruchflächigkeit}
+
+Die Bruchflächigkeit beschreibt den Anteil gebrochener und gerundeter
+Körner einer Gesteinskörnung. Gebrochene Körner werden mit
+\texttt{c} für \textit{crushed}, vollständig gebrochene Körner mit
+\texttt{tc} für \textit{totally crushed} und vollständig gerundete
+Körner mit \texttt{tr} für \textit{totally rounded} bezeichnet.
+
+
+\begin{longtable}{
+  >{\centering\arraybackslash}p{0.20\textwidth}
+  >{\raggedright\arraybackslash}p{0.58\textwidth}
+}
+\toprule
+\textbf{Kategorie} &
+\textbf{Bedeutung} \\
+\midrule
+\endhead
+
+\texttt{C100/0} &
+Gesteinskörnung aus $100\,\%$ vollständig gebrochenen Körnern
+\texttt{tc}. \\
+
+\texttt{C90/1} &
+Mindestens $90\,\%$ gebrochene Körner \texttt{c}; davon mindestens
+$30\,\%$ vollständig gebrochene Körner \texttt{tc}; maximal
+$1\,\%$ vollständig gerundete Körner \texttt{tr}. \\
+
+\texttt{C50/30} &
+Mindestens $50\,\%$ gebrochene Körner \texttt{c}; maximal
+$30\,\%$ vollständig gerundete Körner \texttt{tr}. \\
+
+\texttt{C50/10} &
+Mindestens $50\,\%$ gebrochene Körner \texttt{c}; maximal
+$10\,\%$ vollständig gerundete Körner \texttt{tr}. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Frost-Tau-Widerstand}
+
+Der Frost-Tau-Widerstand von Gesteinskörnung wird nach
+ÖNORM EN 1367-1 bestimmt. Dabei wird der Masseverlust einer
+Gesteinskörnung nach zehn Frost-Tau-Wechseln ermittelt. Die
+Durchführung erfolgt in Frostdosen. 
+
+Der Frost-Tau-Wert $F$ wird mit folgender Gleichung berechnet:
+
+\begin{equation}
+  F =
+  \frac{M_1-M_2}{M_1}
+  \times 100
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $M_1$: gesamte Ausgangstrockenmasse der drei
+  Einzelmessproben in Gramm;
+  \item $M_2$: gesamte Endtrockenmasse der drei Einzelmessproben,
+  die auf dem festgelegten Analysensieb zurückgeblieben sind, in Gramm;
+  \item $F$: prozentualer Masseverlust nach der
+  Frost-Tau-Wechselbeanspruchung.
+\end{itemize}
+
+
+
+\begin{longtable}{
+  >{\centering\arraybackslash}p{0.18\textwidth}
+  >{\centering\arraybackslash}p{0.23\textwidth}
+  >{\raggedright\arraybackslash}p{0.33\textwidth}
+}
+\toprule
+\textbf{Kategorie} &
+\textbf{Masseverlust} &
+\textbf{Bedeutung} \\
+\midrule
+\endhead
+
+F1 &
+$\leq 1\,\%$ &
+Frost-Tau-Widerstand \\
+
+F2 &
+$\leq 2\,\%$ &
+Frost-Tau-Widerstand \\
+
+F4 &
+$\leq 4\,\%$ &
+Frost-Tau-Widerstand \\
+
+angegeben &
+$>4\,\%$ &
+Der Wert ist anzugeben. \\
+
+FNR &
+-- &
+Keine Anforderung. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\subsection{Frostbeständigkeit und Frostsicherheit}
+
+Das Dokument unterscheidet zwischen Frostbeständigkeit und
+Frostsicherheit:
+
+\begin{itemize}
+  \item Die \textbf{Frostbeständigkeit} betrifft das einzelne
+  Gesteinskorn.
+
+  \item Die \textbf{Frostsicherheit} betrifft das Gesteinsmaterial
+  im eingebauten Zustand und hängt auch von der Korngrößenverteilung ab.
+\end{itemize}
+
+
+
+Für ungebundene Tragschichten werden Anforderungen insbesondere an
+Tragfähigkeit und Frostsicherheit gestellt. Die Frostsicherheit wird
+über Korn- und Mineralkriterien sowie durch Frosthebungsversuche
+beurteilt. 
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Frost-Tau-Prüfung}
+
+Bei der Frost-Tau-Prüfung werden drei Einzelmessproben in Frostdosen
+wiederholt Frost- und Tauwechseln ausgesetzt. Vor dem Versuch wird die
+Ausgangstrockenmasse $M_1$ bestimmt.
+
+Nach zehn Frost-Tau-Wechseln wird die Endtrockenmasse $M_2$ jener
+Körnung bestimmt, die auf dem festgelegten Analysensieb
+zurückgeblieben ist. Aus $M_1$ und $M_2$ wird der prozentuale
+Masseverlust $F$ berechnet.
+\end{darstellungsbox}
+
+\section{Chemische Anforderungen}
+
+Gesteinskörnungen dürfen keine Bestandteile enthalten, die die
+Dauerhaftigkeit oder das Erstarrungs- und Erhärtungsverhalten von Beton
+beeinträchtigen. 
+
+Treiberscheinungen können durch Schwefel verursacht werden. Lösliche
+Alkalisulfate wie Gips und Anhydrit sowie Sulfide werden als schädlich
+bezeichnet. Nicht-lösliche Sulfate wie Baryt beziehungsweise
+Schwerspat werden als unbedenklich angeführt. 
+
+Chloride werden als stahlangreifende Stoffe genannt. Zusätzlich dürfen
+keine Stoffe enthalten sein, welche das Erstarren oder Erhärten des
+Betons verändern. Als Beispiel nennt das Dokument Zucker oder
+zuckerähnliche Stoffe. 
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.32\textwidth}
+  >{\raggedright\arraybackslash}p{0.47\textwidth}
+}
+\toprule
+\textbf{Stoff oder Stoffgruppe} &
+\textbf{Bewertung laut Dokument} \\
+\midrule
+\endhead
+
+Lösliche Alkalisulfate, Gips, Anhydrit und Sulfide &
+Schädlich; können Treiberscheinungen verursachen. \\
+
+Nicht-lösliche Sulfate, beispielsweise Baryt oder Schwerspat &
+Unbedenklich. \\
+
+Chloride &
+Stahlangreifende Stoffe. \\
+
+Zucker oder zuckerähnliche Stoffe &
+Können das Erstarrungs- und Erhärtungsverhalten des Betons verändern. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Wasseraufnahme und Wasserlöslichkeit}
+
+Die Kategorie \texttt{WA24\textsubscript{1}} beschreibt die
+Wasseraufnahme nach 24-stündiger Wasserbadlagerung. Sie bedeutet, dass
+die Wasseraufnahme höchstens
+
+\begin{equation}
+  1\,\%
+\end{equation}
+
+beträgt. 
+
+Die Kategorie \texttt{WS} ist ein Maß für die Wasserlöslichkeit von
+Fremdfüller. 
+
+\section{Widerstand gegen Zertrümmerung und Verschleiß}
+
+Der Widerstand von Gesteinskörnung gegen Zertrümmerung und Verschleiß
+kann mit unterschiedlichen Kategorien beschrieben werden.
+
+
+\begin{longtable}{
+  >{\centering\arraybackslash}p{0.22\textwidth}
+  >{\raggedright\arraybackslash}p{0.54\textwidth}
+}
+\toprule
+\textbf{Kategorie} &
+\textbf{Bedeutung} \\
+\midrule
+\endhead
+
+\texttt{LA25} &
+Los-Angeles-Wert höchstens $25$; Maß für den Widerstand gegen
+Zertrümmerung der Körnung $8/11\,\mathrm{mm}$. \\
+
+\texttt{MDE15} &
+Micro-Deval-Wert höchstens $15$; Maß für den Widerstand gegen
+Verschleiß. \\
+
+\texttt{SZ} &
+Maß für den Widerstand gegen Zertrümmerung gemäß Schlagversuch. \\
+
+\texttt{AAV} &
+Maß für den Widerstand gegen Oberflächenabrieb. \\
+
+\texttt{AN} &
+Maß für den Widerstand gegen Abrieb durch Spikereifen. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Weitere Kategorien}
+
+Das Dokument nennt weitere Kategorien zur Beschreibung von
+Gesteinskörnungen und Füllern.
+
+\begin{longtable}{
+  >{\centering\arraybackslash}p{0.22\textwidth}
+  >{\raggedright\arraybackslash}p{0.54\textwidth}
+}
+\toprule
+\textbf{Kategorie} &
+\textbf{Bedeutung} \\
+\midrule
+\endhead
+
+\texttt{AS0,8} &
+Anteil säurelöslicher Sulfate höchstens $0{,}8\,\%$. \\
+
+\texttt{BN} &
+Bitumenzahl; beschreibt die scheinbare Viskosität von Fremdfüller. \\
+
+\texttt{CC80} &
+Calcium-Carbonatgehalt eines Füllers mindestens $80\,\%$. \\
+
+\texttt{PWS} &
+Maß für den Polierwiderstand feiner Gesteinskörnungen nach
+Wehner/Schulze. \\
+
+\texttt{SBLA} &
+Maß für den Widerstand gegen Sonnenbrand von Basalt. \\
+
+\texttt{SC1} &
+Muschelschalengehalt höchstens $10\,\%$. \\
+
+\texttt{V3,5} &
+Volumenzunahme von Stahlwerkschlacke höchstens $3{,}5\,\%$. \\
+
+\texttt{V28/45} &
+Maß für den Hohlraumgehalt von Fremdfüller. \\
+
+\texttt{GA90} &
+Korngemisch $0/D$ mit maximal $10\,\%$ Überkorn. \\
+
+\texttt{Gc90/15} &
+Grobe Gesteinskörnung mit maximal $10\,\%$ Überkorn und maximal
+$15\,\%$ Unterkorn. \\
+
+\texttt{GF85} &
+Feine Gesteinskörnung mit $d=0$ und maximal $15\,\%$ Überkorn. \\
+
+\texttt{GTC} &
+Toleranz bei der Angabe der Korngrößenverteilung. \\
+
+\texttt{Ka20} &
+Calciumhydroxid-Gehalt mindestens $20\,\%$. \\
+
+\texttt{MBF10} &
+Methylenblaugehalt höchstens $10\,\mathrm{M.\%}$ zur Beurteilung der
+Feinanteile kleiner oder gleich $0{,}063\,\mathrm{mm}$. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Zusammenfassung}
+
+Gesteinskörnung muss geometrische, mechanische, physikalische und
+chemische Anforderungen erfüllen. Wesentliche Merkmale sind
+Korngrößenverteilung, Kornform, Bruchflächigkeit, Frost-Tau-Widerstand,
+Wasseraufnahme, Widerstand gegen Zertrümmerung und Verschleiß sowie die
+chemische Unbedenklichkeit.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Für eine dauerhafte Verwendung in Beton, Asphalt oder Tragschichten
+muss Gesteinskörnung unter anderem eine geeignete Korngrößenverteilung,
+ausreichende Frost-Tau-Beständigkeit, geeignete Kornform und
+chemische Unbedenklichkeit aufweisen.
+
+\end{merksatzbox}
+% =================================================
+% KAPITEL 5: METALLISCHE WERKSTOFFE
+% Diesen gesamten Block vor \end{document} einfügen.
+% =================================================
+
+\chapter{Metallische Werkstoffe}
+
+\section{Kristalliner Aufbau von Metallen}
+
+Die Eigenschaften von Metallen werden durch ihren besonderen atomaren
+Aufbau bestimmt. Im festen Zustand ordnen sich die Atome in
+regelmäßigen Raumgittern an. In diesen Gittern können sich die
+Valenzelektronen nahezu frei bewegen. Diese Elektronenkonfiguration ist
+entscheidend für die Leitfähigkeit und die Verformbarkeit von Metallen.
+
+
+Abhängig vom Material, von den Randbedingungen und vom Energiezustand
+können unterschiedliche Kristallstrukturen entstehen. Diese
+Kristallstrukturen haben einen großen Einfluss auf die Eigenschaften
+des Werkstoffs. 
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Die Eigenschaften metallischer Werkstoffe werden wesentlich durch ihren
+atomaren Aufbau und die daraus entstehende Kristallstruktur bestimmt.
+Die nahezu frei beweglichen Valenzelektronen sind insbesondere für
+Leitfähigkeit und Verformbarkeit verantwortlich.
+
+\end{merksatzbox}
+
+\section{Wichtige Kristallstrukturen}
+
+Das Dokument nennt drei wichtige Kristallstrukturen von Metallen:
+
+\begin{itemize}
+  \item das kubisch raumzentrierte Gitter, kurz \textbf{krz};
+  \item das kubisch flächenzentrierte Gitter, kurz \textbf{kfz};
+  \item das Gitter mit hexagonal dichtester Packung, kurz
+  \textbf{hdp}.
+\end{itemize}
+
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.34\textwidth}
+  >{\raggedright\arraybackslash}p{0.42\textwidth}
+}
+\toprule
+\textbf{Kristallstruktur} &
+\textbf{Abkürzung} \\
+\midrule
+\endhead
+
+Kubisch raumzentriertes Gitter &
+krz \\
+
+Kubisch flächenzentriertes Gitter &
+kfz \\
+
+Gitter mit hexagonal dichtester Packung &
+hdp \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Kristallstrukturen von Eisen}
+
+Für Eisen werden im Dokument zwei Kristallstrukturen ausdrücklich
+genannt:
+
+\begin{itemize}
+  \item $\alpha$-Eisen besitzt ein kubisch raumzentriertes Gitter;
+  \item $\gamma$-Eisen besitzt ein kubisch flächenzentriertes Gitter.
+\end{itemize}
+
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.30\textwidth}
+  >{\raggedright\arraybackslash}p{0.45\textwidth}
+}
+\toprule
+\textbf{Zustand des Eisens} &
+\textbf{Kristallstruktur} \\
+\midrule
+\endhead
+
+$\alpha$-Eisen &
+kubisch raumzentriertes Gitter, krz \\
+
+$\gamma$-Eisen &
+kubisch flächenzentriertes Gitter, kfz \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Kristallgitter von Eisen}
+
+Die Darstellung ordnet dem $\alpha$-Eisen das kubisch raumzentrierte
+Gitter zu. Dabei befinden sich Atome an den Ecken eines Würfels sowie
+ein weiteres Atom im Zentrum des Würfels.
+
+Dem $\gamma$-Eisen wird das kubisch flächenzentrierte Gitter
+zugeordnet. Dabei befinden sich Atome an den Ecken eines Würfels sowie
+zusätzliche Atome in den Flächenmitten.
+
+Die beiden Gitterformen verdeutlichen, dass sich die räumliche
+Anordnung der Atome in einem metallischen Werkstoff ändern kann.
+\end{darstellungsbox}
+
+\section{Formgedächtnislegierungen}
+
+Das Dokument behandelt Formgedächtnislegierungen im Zusammenhang mit
+eisenbasierten Formgedächtnislegierungen. Diese können durch thermische
+Nachbehandlung aktiviert werden. 
+
+Das Materialverhalten einer Formgedächtnislegierung wird unter anderem
+durch eine Abnahme der Materialsteifigkeit infolge einer
+Metallgitterumwandlung beschrieben. Dabei wird eine Umwandlung von
+Austenit zu Martensit genannt. 
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Bei Formgedächtnislegierungen kann sich die Materialsteifigkeit infolge
+einer Metallgitterumwandlung verändern. Im Dokument wird dabei die
+Umwandlung von Austenit zu Martensit genannt.
+
+\end{merksatzbox}
+
+\section{Einweg-Formgedächtnislegierung}
+
+Das Dokument zeigt schematisch das Verhalten einer
+Einweg-Formgedächtnislegierung. Dabei werden drei wesentliche Vorgänge
+unterschieden:
+
+\begin{enumerate}
+  \item mechanisches Vordehnen der Legierung;
+  \item Erwärmung der vorgedehnten Legierung bei freier
+  Verformbarkeit;
+  \item Erwärmung der vorgedehnten Legierung bei eingeschränkter
+  beziehungsweise verhinderter freier Verformbarkeit.
+\end{enumerate}
+
+
+
+Bei steigender Belastung wird nach der Umwandlung des Gitters eine
+elastische Verformung beschrieben. Bei einer Entlastung erfolgt eine
+lineare Rückverformung. Gleichzeitig kann eine bleibende Dehnung aus
+der Gitterumwandlung vorhanden sein. 
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Verhalten einer Einweg-Formgedächtnislegierung}
+
+Die Darstellung enthält Spannungs-Dehnungs- und
+Spannungs-Temperatur-Verläufe einer Einweg-Formgedächtnislegierung.
+
+Zunächst erfolgt eine mechanische Vordehnung. Danach wird die
+vorgedehnte Legierung erwärmt. Die Darstellung unterscheidet dabei
+einen Fall mit freier Verformbarkeit und einen Fall, bei dem die freie
+Verformbarkeit eingeschränkt ist.
+
+Als charakteristische Temperaturen sind $A_s$ und $A_f$ bezeichnet.
+Die Darstellung zeigt außerdem die Rückverformung bei Entlastung und
+die mit der Temperatur verknüpfte Spannungsentwicklung.
+\end{darstellungsbox}
+
+\section{Rückstellspannung}
+
+Durch Abkühlen einer Formgedächtnislegierung kann die Spannung weiter
+ansteigen. Die dabei erreichte Spannung wird als
+\textbf{Rückstellspannung} bezeichnet. 
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Steigt die Spannung beim Abkühlen einer Formgedächtnislegierung weiter
+an, wird die erreichte Spannung als Rückstellspannung bezeichnet.
+
+\end{merksatzbox}
+
+\section{Anwendung im Betonbau}
+
+Das Dokument zeigt die Aktivierung einer Vorspannung durch
+Formgedächtnislegierungen bei sofortigem Verbund. Dabei wird die
+thermische Aktivierung der Formgedächtnislegierung im Zusammenhang mit
+Vorspannung dargestellt. 
+
+Die behandelte Quelle bezieht sich auf selbstvorspannende
+ultrahochfeste Betonelemente, die mit eisenbasierten
+Formgedächtnislegierungen bewehrt sind und durch thermische
+Nachbehandlung aktiviert werden. 
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Aktivierung einer Vorspannung}
+
+Die Darstellung zeigt eine Formgedächtnislegierung im sofortigen
+Verbund mit Beton. Durch thermische Aktivierung der
+Formgedächtnislegierung kann eine Vorspannung aktiviert werden.
+
+Die dargestellte Anwendung verbindet somit das temperaturabhängige
+Materialverhalten der Legierung mit einer Anwendung in einem
+Betonelement.
+\end{darstellungsbox}
+
+\section{Zusammenfassung}
+
+Metalle besitzen im festen Zustand regelmäßig angeordnete Raumgitter.
+Für Eisen nennt das Dokument $\alpha$-Eisen mit kubisch
+raumzentriertem Gitter und $\gamma$-Eisen mit kubisch
+flächenzentriertem Gitter. 
+
+Formgedächtnislegierungen weisen ein spezielles, durch
+Gitterumwandlungen geprägtes Materialverhalten auf. Sie können nach
+mechanischem Vordehnen thermisch aktiviert werden. Beim Abkühlen kann
+eine Rückstellspannung entstehen. \quelle{[2][^3]}
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Die im Dokument behandelten eisenbasierten Formgedächtnislegierungen
+können durch thermische Nachbehandlung aktiviert werden. Beim Abkühlen
+kann eine Rückstellspannung entstehen; dadurch ist unter anderem eine
+Anwendung zur Aktivierung von Vorspannung möglich.
+\quelle{[2][3]}
+\end{merksatzbox}
+% =================================================
+% KAPITEL 6: GLAS
+% =================================================
+% =================================================
+% KAPITEL 6: GLAS
+% Diesen gesamten Block vor \end{document} einfügen.
+% =================================================
+
+\chapter{Glas}
+
+\section{Struktur und Definition von Glas}
+
+Glas ist ein anorganischer, meist silikatischer Festkörper. Es wird aus
+Rohstoffen in einem Schmelzprozess hergestellt und erstarrt ohne
+Kristallisation. 
+
+Eine weitere Definition beschreibt Glas als anorganisches
+Schmelzprodukt, das im Wesentlichen ohne Kristallisation erstarrt.
+
+
+Siliziumdioxid kann mit kristallinem Aufbau als Quarz oder mit amorphem
+Aufbau als Glas vorkommen. Glas unterscheidet sich damit von
+kristallinen Stoffen durch seinen amorphen Aufbau. 
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Glas ist ein anorganischer, meist silikatischer Festkörper. Es entsteht
+durch Schmelzen von Rohstoffen und erstarrt ohne Kristallisation.
+
+\end{merksatzbox}
+
+\section{Glaszustand}
+
+Glas wird im physikalisch-chemischen Sinn als unterkühlte Flüssigkeit
+bezeichnet. Gleichzeitig sind Gläser thermodynamisch metastabile
+Festkörper. 
+
+Unterhalb der Glasübergangstemperatur $T_g$ ist Glas spröde. Oberhalb
+der Glasübergangstemperatur wird Glas plastisch verformbar.
+
+
+Die Glasübergangstemperatur ist jene Temperatur, bei der die Viskosität
+des Glases folgenden Wert erreicht:
+
+\begin{equation}
+  \eta = 10^{12}\,\mathrm{Pa \cdot s}
+\end{equation}
+
+Für übliche silikatische Gläser liegt der Transformationsbereich bei:
+
+\begin{equation}
+  520 \text{ bis } 550\,^\circ\mathrm{C}
+\end{equation}
+
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Übergang von kristallinen und glasigen Stoffen}
+
+Kristalline Stoffe besitzen beim Übergang vom festen in den flüssigen
+Zustand einen klar definierten Schmelzpunkt. Glasige Stoffe zeigen
+dagegen keinen einzelnen scharfen Schmelzpunkt.
+
+Bei Glas erfolgt der Übergang vom spröden Zustand zum plastisch
+verformbaren beziehungsweise viskosen Zustand über einen breiteren
+Temperaturbereich. Die Glasübergangstemperatur wird mit $T_g$
+bezeichnet.
+\end{darstellungsbox}
+
+\section{Physikalische Eigenschaften}
+
+Die mittlere Dichte von Natron-Kalk-Glas und Kali-Kalk-Glas beträgt:
+
+\begin{equation}
+  \rho \approx 2{,}5 \cdot 10^3\,\mathrm{kg/m^3}
+\end{equation}
+
+Bleiglas besitzt eine höhere Dichte zwischen:
+
+\begin{equation}
+  \rho =
+  3{,}5 \text{ bis } 4{,}8 \cdot 10^3\,\mathrm{kg/m^3}
+\end{equation}
+
+
+
+Der Elastizitätsmodul von Glas hängt von der Zusammensetzung ab. Er
+liegt im Bereich von:
+
+\begin{equation}
+  E =
+  35\,000 \text{ bis } 75\,000\,\mathrm{N/mm^2}
+\end{equation}
+
+Der E-Modul ist außerdem stark temperaturabhängig. Bis zur
+Transformationstemperatur nimmt er langsam ab; bei weiterer
+Temperatursteigerung fällt er rasch gegen null. 
+
+Die Härte von Glas beträgt auf der Mohs'schen Härteskala ungefähr:
+
+\begin{equation}
+  H = 6
+\end{equation}
+
+Glas ist damit ungefähr so hart wie Feldspat, jedoch weicher als Quarz
+mit einer Mohs-Härte von $7$. Feiner Staub kann dennoch Kratzer auf
+Glas hinterlassen. 
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.42\textwidth}
+  >{\raggedright\arraybackslash}p{0.30\textwidth}
+}
+\toprule
+\textbf{Eigenschaft} &
+\textbf{Wert beziehungsweise Beschreibung} \\
+\midrule
+\endhead
+
+Dichte von Natron-Kalk-Glas und Kali-Kalk-Glas &
+ca.\ $2{,}5 \cdot 10^3\,\mathrm{kg/m^3}$ \\
+
+Dichte von Bleiglas &
+$3{,}5$ bis $4{,}8 \cdot 10^3\,\mathrm{kg/m^3}$ \\
+
+Elastizitätsmodul &
+$35\,000$ bis $75\,000\,\mathrm{N/mm^2}$ \\
+
+Mohs-Härte &
+ca.\ $6$ \\
+
+Transformationsbereich silikatischer Gläser &
+ca.\ $520$ bis $550\,^\circ\mathrm{C}$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Thermische und optische Eigenschaften}
+
+Der lineare thermische Ausdehnungskoeffizient von Bauglas beträgt rund:
+
+\begin{equation}
+  \alpha =
+  9 \cdot 10^{-6}\,\mathrm{K^{-1}}
+\end{equation}
+
+Bei großflächigen Glasscheiben in Rahmenkonstruktionen müssen mögliche
+Verformungsdifferenzen zwischen Rahmen und Glas berücksichtigt werden,
+da Bruchgefahr bestehen kann. 
+
+Die Wärmeleitzahl von Glas beträgt ungefähr:
+
+\begin{equation}
+  \lambda \approx 0{,}8\,\mathrm{W/(m \cdot K)}
+\end{equation}
+
+Glas ist damit ein relativ schlechter Wärmeleiter. 
+
+Die Lichtdurchlässigkeit ist eine wesentliche Eigenschaft von Glas.
+Sie erreicht jedoch nicht $100\,\%$. Die Lichtdurchlässigkeit
+verschiedener Glasarten ist in der folgenden Tabelle dargestellt.
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.42\textwidth}
+  >{\centering\arraybackslash}p{0.27\textwidth}
+}
+\toprule
+\textbf{Glasart} &
+\textbf{Lichtdurchlässigkeit} \\
+\midrule
+\endhead
+
+Fensterglas &
+$90$ bis $92\,\%$ \\
+
+Kristallspiegelglas &
+$90$ bis $92\,\%$ \\
+
+Gartenglas &
+$88$ bis $90\,\%$ \\
+
+Drahtspiegelglas &
+ca.\ $88\,\%$ \\
+
+Gussglas und Drahtglas &
+$80$ bis $90\,\%$ \\
+
+Verbund-Sicherheitsglas &
+$85$ bis $90\,\%$ \\
+
+Mehrscheibenglas mit Metallbeschichtung &
+$40$ bis $60\,\%$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+Die Lichtdurchlässigkeit wird unter anderem durch Reflexion,
+Lichtbrechung und Streuung beeinflusst. Handelsübliches Glas besitzt
+eine Brechzahl zwischen ungefähr $1{,}3$ und $2{,}1$. Bei senkrechtem
+Lichteinfall werden ungefähr $8\,\%$ des Lichts reflektiert.
+
+
+\section{Mechanische Eigenschaften}
+
+Glas ist im erkalteten Zustand ein spröder Werkstoff. Es kann
+Spannungsspitzen nicht durch plastische Verformung abbauen.
+
+
+Wird die Bruchdehnung von ungefähr
+
+\begin{equation}
+  \varepsilon_\mathrm{B} \approx 0{,}1\,\%
+\end{equation}
+
+erreicht, bricht Glas ohne Einschnürung. Die Bruchflächen sind
+muschelförmig. 
+
+Glas verhält sich bis zum Bruch linear-elastisch. Im Gegensatz zu Stahl
+und Beton tritt bei Glas vor dem Bruch keine ausgeprägte plastische
+Verformung auf. 
+
+Die praktische Festigkeit von Glas liegt im konstruktiven Bereich
+zwischen:
+
+\begin{equation}
+  30 \text{ bis } 90\,\mathrm{N/mm^2}
+\end{equation}
+
+Die theoretische Festigkeit ist deutlich höher. Der Unterschied wird
+vor allem durch feine Mikrorisse an der Glasoberfläche verursacht.
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.42\textwidth}
+  >{\centering\arraybackslash}p{0.28\textwidth}
+}
+\toprule
+\textbf{Glaserzeugnis} &
+\textbf{Charakteristische Biegezugfestigkeit} \\
+\midrule
+\endhead
+
+Floatglas &
+$45\,\mathrm{N/mm^2}$ \\
+
+TVG aus Floatglas &
+$70\,\mathrm{N/mm^2}$ \\
+
+ESG aus Floatglas &
+$120\,\mathrm{N/mm^2}$ \\
+
+Chemisch vorgespanntes Glas &
+$150\,\mathrm{N/mm^2}$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Glas ist spröde und verhält sich bis zum Bruch linear-elastisch. Es
+kann Spannungsspitzen nicht durch plastische Verformung abbauen.
+
+\end{merksatzbox}
+
+\section{Chemische Beständigkeit}
+
+Glasoberflächen werden durch eine calciumoxid- und
+siliziumdioxidreiche Oberflächenschicht vor saurem chemischem Angriff
+geschützt. Wasser und die meisten Säuren greifen Glas daher praktisch
+nicht an. 
+
+Eine wesentliche Ausnahme ist Flusssäure. Sie kann Glas in kurzer Zeit
+zerstören. Die chemische Reaktion lautet:
+
+\begin{equation}
+  \mathrm{
+  4HF + SiO_2
+  \Rightarrow
+  SiF_4 + 2H_2O
+  }
+\end{equation}
+
+Flusssäure wird daher zum Ätzen von Glas verwendet. 
+
+Laugen, beispielsweise Kalkwasser oder Mörtelwasser, greifen Glas bei
+dauernder Einwirkung an. Dabei wird Siliziumdioxid aus dem Glas
+herausgelöst. Das Glas kann dadurch trüb werden und Streifen bilden.
+
+
+\section{Rohstoffe für die Glasherstellung}
+
+Die fein gemahlenen und möglichst reinen Rohstoffe werden entsprechend
+ihren Massenanteilen gemischt. Dieses trockene Gemisch wird als
+\textbf{Gemenge} bezeichnet. 
+
+Die wichtigsten Grundbestandteile von Glas sind:
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.31\textwidth}
+  >{\centering\arraybackslash}p{0.23\textwidth}
+  >{\centering\arraybackslash}p{0.20\textwidth}
+}
+\toprule
+\textbf{Rohstoff} &
+\textbf{Chemisches Symbol} &
+\textbf{Anteil} \\
+\midrule
+\endhead
+
+Quarz als Hauptbestandteil &
+$\mathrm{SiO_2}$ &
+ca.\ $70\,\%$ \\
+
+Soda als Flussmittel &
+$\mathrm{Na_2CO_3}$ &
+$11$ bis $16\,\%$ \\
+
+Kalksteinmehl als Stabilisator &
+$\mathrm{CaCO_3}$ &
+$5$ bis $12\,\%$ \\
+
+Magnesiumoxid &
+$\mathrm{MgO}$ &
+$0$ bis $5\,\%$ \\
+
+Aluminiumoxid &
+$\mathrm{Al_2O_3}$ &
+$0{,}2$ bis $2\,\%$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\subsection{Quarzsand}
+
+Siliziumdioxid in Form von Quarzsand ist der wichtigste Grundrohstoff
+der Glasherstellung. Der Quarzsand muss eine hohe Reinheit besitzen.
+Bereits Verunreinigungen von etwa $0{,}1\,\%$ Eisenoxid
+$\mathrm{Fe_2O_3}$ können ihn für anspruchsvollere Anwendungen
+unbrauchbar machen. 
+
+Quarzsand ist der Hauptbestandteil des Gemenges und besitzt einen
+Anteil von mindestens $60\,\%$. 
+
+\subsection{Flussmittel}
+
+Flussmittel werden eingesetzt, um die Schmelztemperatur abzusenken.
+Dadurch wird der Schmelzprozess effizienter und wirtschaftlicher.
+
+
+Glasscherben wirken als Flussmittel. Sie beschleunigen das
+Flüssigwerden des Sandgemenges und können aus innerbetrieblichem
+Ausschuss oder aus Recycling stammen. 
+
+Soda ist Natriumcarbonat:
+
+\begin{equation}
+  \mathrm{Na_2CO_3}
+\end{equation}
+
+Beim Abkühlen geht Natriumoxid in das Glas über. Kohlendioxid entweicht
+aus der Glasschmelze. 
+
+\subsection{Stabilisatoren}
+
+Kalk dient als Stabilisator. Bei Temperaturen von ungefähr
+$1000\,^\circ\mathrm{C}$ entweicht aus Calciumcarbonat Kohlensäure.
+Zurück bleibt Calciumoxid, das die chemischen und mechanischen
+Eigenschaften des Glases verbessert. 
+
+Aluminiumoxid wird dem Glasgemenge als alkali-haltiger Feldspat
+zugegeben. Es erhöht die Zähigkeit des Glases im tieferen
+Temperaturbereich. 
+
+\section{Herstellungsprozess}
+
+Der Glasherstellungsprozess gliedert sich in die Schritte:
+
+\begin{enumerate}
+  \item Mischen der Rohstoffe zum Gemenge,
+  \item Schmelzen,
+  \item Läutern,
+  \item Formen,
+  \item Kühlen.
+\end{enumerate}
+
+
+
+Das Gemenge wird im Ofen bei ungefähr
+
+\begin{equation}
+  1500\,^\circ\mathrm{C}
+\end{equation}
+
+eingeschmolzen. Durch Konvektion in der Schmelzwanne wird die
+Glasschmelze homogenisiert. 
+
+Die Formgebung kann durch Blasen, Ziehen, Walzen oder Gießen erfolgen.
+
+
+Das Abkühlen muss langsam und stufenweise erfolgen. Die richtige
+Abkühlgeschwindigkeit ist für die Qualität der Glaserzeugung von großer
+Bedeutung. 
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Glasherstellungsprozess}
+
+Die Rohstoffe Quarz, Kalk und Soda werden zunächst gemischt. Die
+fertige Mischung wird Gemenge genannt.
+
+Das Gemenge wird bei ungefähr $1500\,^\circ\mathrm{C}$ eingeschmolzen.
+Beim Läutern werden Blasen aus der Glasschmelze ausgetrieben.
+Anschließend wird das Glas geformt, beispielsweise durch Blasen,
+Ziehen, Walzen oder Gießen.
+
+Nach der Formgebung folgt ein langsames und stufenweises Abkühlen.
+\end{darstellungsbox}
+
+\section{Glasarten}
+
+Je nach Zusammensetzung und Einsatzbereich werden unterschiedliche
+Glasarten verwendet. Die Eigenschaften hängen von der Zusammensetzung,
+der Herstellung und der thermischen Vorgeschichte ab. 
+
+\subsection{Natron-Kalk-Glas}
+
+Natron-Kalk-Glas wird durch Zusammenschmelzen von Quarz, Soda und Kalk
+hergestellt. Es wird insbesondere als Fensterglas, Tafelglas,
+Flaschenglas und Spiegelglas verwendet. 
+
+Die Reaktionsgleichung für die Glasbildung lautet:
+
+\begin{equation}
+  \mathrm{
+  Na_2CO_3 + CaCO_3 + 6SiO_2
+  \Rightarrow
+  Na_2O \cdot CaO \cdot 6SiO_2 + 2CO_2
+  }
+\end{equation}
+
+
+
+\subsection{Kali-Kalk-Glas}
+
+Kali-Kalk-Glas wird mit Pottasche anstelle von Soda hergestellt. Es ist
+auch als böhmisches Glas bekannt. Es ist schwerer schmelzbar, härter und
+stärker lichtbrechend als Natronglas. 
+
+Kali-Kalk-Glas wird für feinere und geschliffene Gegenstände verwendet.
+
+
+\subsection{Bleiglas}
+
+Bleiglas entsteht durch die Zugabe von Bleioxid. Es besitzt eine hohe
+Dichte und ein starkes Lichtbrechungsvermögen. Es wird als
+Bleikristallglas vor allem für geschliffene Glaswaren verwendet.
+
+
+\subsection{Borosilikatglas}
+
+Borosilikatglas entsteht, wenn ein Teil des Siliziumdioxids durch
+Bortrioxid ersetzt wird. Der Anteil an Bortrioxid beträgt etwa
+$8$ bis $13\,\%$ der Masse. 
+
+Borosilikatglas besitzt einen geringeren Ausdehnungskoeffizienten und
+ist daher weniger empfindlich gegenüber raschem Erhitzen und Abkühlen.
+Es ist außerdem widerstandsfähiger gegen Wasser und Säuren.
+
+
+Als Beispiele werden Jenaer Glas, Pyrexglas, Silexglas, Resistglas und
+Duraxglas genannt. 
+
+\subsection{Schaumglas}
+
+Schaumglas entsteht durch gemeinsames Erhitzen von Glaspulver und einem
+gasbildenden Stoff, beispielsweise Kohlenstoff. Es entsteht ein
+geschlossenzelliger, spröd-harter und relativ schwerer Schaumstoff.
+
+
+Schaumglas wird hauptsächlich in Plattenform eingesetzt, wenn neben
+geringer Wärmeleitfähigkeit auch Unbrennbarkeit und Fäulnissicherheit
+erforderlich sind. 
+
+Der Anwendungstemperaturbereich liegt zwischen:
+
+\begin{equation}
+  -250\,^\circ\mathrm{C}
+  \text{ und }
+  +450\,^\circ\mathrm{C}
+\end{equation}
+
+
+
+\section{Floatglas}
+
+Beim Floatglas-Verfahren wird die Glasschmelze auf ein flüssiges
+Zinnbad geleitet. Da Glas eine geringere Dichte besitzt als flüssiges
+Zinn, schwimmt die Glasschmelze auf dem Zinnbad. 
+
+Durch die ebene Oberfläche des Zinnbads und die Oberflächenspannung
+entsteht ein planparalleles Glasband. 
+
+Die Glasschmelze besitzt beim Eintritt in das Floatbad ungefähr eine
+Temperatur von:
+
+\begin{equation}
+  1100\,^\circ\mathrm{C}
+\end{equation}
+
+Danach wird das Glasband im Kühltunnel und auf Rollen planmäßig und
+spannungsfrei auf Raumtemperatur abgekühlt. 
+
+Die übliche Scheibendicke von Floatglas liegt zwischen:
+
+\begin{equation}
+  1{,}5 \text{ und } 19{,}0\,\mathrm{mm}
+\end{equation}
+
+In Ausnahmefällen können Scheiben bis zu $24{,}0\,\mathrm{mm}$ Dicke
+hergestellt werden. 
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Floatglas-Verfahren}
+
+Die Glasschmelze wird auf ein flüssiges Zinnbad geleitet. Aufgrund der
+geringeren Dichte schwimmt das Glas auf dem geschmolzenen Zinn.
+
+Durch die plane Oberfläche des Zinnbads und die Oberflächenspannung
+bildet sich ein ebenes, planparalleles Glasband. Dieses wird in einer
+Kühlstraße beziehungsweise in einem Kühltunnel spannungsfrei
+abgekühlt und anschließend zugeschnitten.
+\end{darstellungsbox}
+
+\section{Einscheibensicherheitsglas}
+
+Einscheibensicherheitsglas wird mit \texttt{ESG} abgekürzt. Es handelt
+sich um voll vorgespanntes Glas. Die Vorspannung wird durch einen
+thermischen oder chemischen Prozess eingebracht. 
+
+Beim thermischen Vorspannen werden Floatglasscheiben auf folgende
+Temperatur erhitzt:
+
+\begin{equation}
+  620 \text{ bis } 650\,^\circ\mathrm{C}
+\end{equation}
+
+Danach werden sie durch Konvektion von der Oberfläche her rasch
+abgekühlt. 
+
+Durch die schnelle Abkühlung entsteht an der Glasoberfläche eine
+Druckspannung. Im Inneren entsteht aus Gleichgewichtsgründen eine
+Zugspannung. 
+
+Die Druckspannung an der Oberfläche beträgt ungefähr:
+
+\begin{equation}
+  10{,}0\,\mathrm{kN/cm^2}
+\end{equation}
+
+Die Zugspannung im Inneren beträgt ungefähr:
+
+\begin{equation}
+  5{,}0\,\mathrm{kN/cm^2}
+\end{equation}
+
+Die Oberflächendruckspannung erhöht die Biegefestigkeit und die
+Schlagfestigkeit. 
+
+\subsection{Bruchverhalten von ESG}
+
+Beim Bruch zerspringt ESG aufgrund der gespeicherten Energie aus dem
+Eigenspannungszustand in kleine würfelförmige Bruchstücke. Diese
+Bruchstücke besitzen eine Größe von weniger als:
+
+\begin{equation}
+  1\,\mathrm{cm^2}
+\end{equation}
+
+Dadurch wird das Risiko größerer Schnittverletzungen reduziert.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+ESG wird thermisch vorgespannt. Beim Bruch zerfällt es in kleine,
+stumpfkantige Bruchstücke. Dadurch wird das Risiko schwerer
+Schnittverletzungen gesenkt.
+
+\end{merksatzbox}
+
+\subsection{Spontanbruch von ESG}
+
+Bei der Herstellung von Einscheibensicherheitsglas können
+Nickel-Sulfid-Einschlüsse entstehen. Durch eine verzögerte
+Phasenumwandlung von $\alpha$-NiS zu $\beta$-NiS kann sich das
+Volumen um ungefähr $4\,\%$ vergrößern. 
+
+Der Temperaturausdehnungskoeffizient von Nickel-Sulfid ist größer als
+jener von Glas. Durch Temperaturerhöhung können innere Spannungen
+entstehen. Überschreiten diese Spannungen die vorhandene Glasfestigkeit,
+kann es zu einem Spontanbruch kommen. \quelle{[20][^4]}
+
+Als Gegenmaßnahme wird ein Heißlagerungstest durchgeführt. Dabei wird
+ESG auf folgende Temperatur erwärmt:
+
+\begin{equation}
+  290\,^\circ\mathrm{C}
+\end{equation}
+
+Die Dauer des Tests beträgt:
+
+\begin{equation}
+  8\,\mathrm{h}
+\end{equation}
+
+Dadurch wird das Wachstum von Nickel-Sulfid beschleunigt. Ein möglicher
+Spontanbruch tritt dann bereits im Heißlagerungsofen auf.
+
+
+\section{Teilvorgespanntes Glas}
+
+Teilvorgespanntes Glas wird mit \texttt{TVG} abgekürzt. Es wird auf eine
+geringere Temperatur als ESG erhitzt und langsamer sowie kontrollierter
+abgekühlt. 
+
+Die Druckvorspannung von TVG beträgt ungefähr:
+
+\begin{equation}
+  5{,}0\,\mathrm{kN/cm^2}
+\end{equation}
+
+TVG kann derzeit bis zu einer Dicke von ungefähr
+$10{,}0\,\mathrm{mm}$ hergestellt werden. Seine Festigkeit liegt
+zwischen jener von Floatglas und ESG. 
+
+\section{Verbundsicherheitsglas}
+
+Verbundsicherheitsglas wird mit \texttt{VSG} abgekürzt. Es besteht aus
+zwei oder mehr Glasscheiben, die durch eine oder mehrere elastische,
+hochreißfeste Kunststofffolien aus Polyvinylbutyral verbunden sind.
+
+
+Die Dicke einer PVB-Folie beträgt:
+
+\begin{equation}
+  0{,}38\,\mathrm{mm}
+\end{equation}
+
+
+
+Die Glasscheiben können aus Floatglas, ESG oder TVG bestehen.
+
+
+Die Folien werden auf die Glasscheiben gewalzt. Anschließend wird der
+Verbund im Autoklav hergestellt. Die Herstellung erfolgt bei ungefähr:
+
+\begin{align}
+  T &\approx 140\,^\circ\mathrm{C}, \\
+  p &\approx 12\,\mathrm{bar},
+\end{align}
+
+über eine Dauer von:
+
+\begin{equation}
+  6 \text{ bis } 8\,\mathrm{h}
+\end{equation}
+
+
+
+Die Folie hält beim Bruch die Bruchstücke an der Folie fest. Bei
+Verbundsicherheitsglas aus Floatglas oder TVG kann die Resttragfähigkeit
+auch im gebrochenen Zustand relativ hoch sein. 
+
+\section{Isolierglas}
+
+Isolierglas besteht aus zwei oder mehreren Scheiben, die durch
+Gasschichten getrennt sind. Als Füllgase werden Argon, Krypton und
+Xenon genannt. Auch Luftschichten können verwendet werden.
+
+
+Die Gas- oder Luftschicht dient der Wärmedämmung. Die Ränder der
+gesamten Scheibe müssen gasdicht abgeschlossen sein. 
+
+Der Abstand zwischen den Scheiben beträgt:
+
+\begin{equation}
+  7{,}0 \text{ bis } 20{,}0\,\mathrm{mm}
+\end{equation}
+
+
+
+Die einzelnen Scheiben können aus Floatglas, ESG, TVG oder VSG
+bestehen. 
+
+Bei der Bemessung muss die klimatisch bedingte Druckdifferenz des
+eingeschlossenen Gases berücksichtigt werden. Diese entsteht durch
+Änderungen von Temperatur, Luftdruck oder Ortshöhe. 
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Isolierglas und Klimalast}
+
+Isolierglas besteht aus mindestens zwei Glasscheiben. Zwischen den
+Scheiben befindet sich eine Gas- oder Luftschicht. Abstandshalter,
+Trockenmittel und Dichtungen bilden den Randverbund.
+
+Ändern sich Temperatur, Luftdruck oder Ortshöhe, verändert sich der
+Druck des eingeschlossenen Gases. Diese Einwirkung wird als
+Klimalast bezeichnet und kann zu Verformungen der Glasscheiben führen.
+\end{darstellungsbox}
+
+\section{Bearbeitung und Beschichtung}
+
+Die normale Schnittkante ist die einfachste Form der Kantenbearbeitung.
+Sie wird dort verwendet, wo die Schnittkante im Rahmen liegt und keine
+Verletzungsgefahr durch die scharfe Kante besteht. 
+
+Weitere Bearbeitungsmöglichkeiten sind Schleifen und Polieren. Bei ESG
+wird die Kante leicht gebrochen beziehungsweise abgeschrägt, damit die
+scharfe Kante entschärft wird. 
+
+Als Oberflächenbehandlungen werden genannt:
+
+\begin{itemize}
+  \item Emailierung,
+  \item Ätzung,
+  \item Sandstrahlung.
+\end{itemize}
+
+
+
+Beschichtungen können auf der Außenseite, der Innenseite oder im
+Scheibenzwischenraum angebracht werden. Sie dienen insbesondere für:
+
+\begin{itemize}
+  \item Wärmeschutzglas,
+  \item Sonnenschutzglas,
+  \item Reflexionsschichten,
+  \item vereinfachte Reinigung mit Lotus-Effekt.
+\end{itemize}
+
+
+
+\section{Zusammenfassung}
+
+Glas ist ein amorpher, silikatischer Werkstoff, der ohne
+Kristallisation erstarrt. Unterhalb der Glasübergangstemperatur ist es
+spröde, oberhalb davon plastisch verformbar. 
+
+Für Bauglas sind insbesondere Floatglas, ESG, TVG, VSG und Isolierglas
+von Bedeutung. Floatglas bildet die Ausgangsbasis für zahlreiche
+weiterverarbeitete Glasprodukte. 
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Floatglas entsteht auf einem flüssigen Zinnbad. ESG wird durch
+thermisches Vorspannen verfestigt. VSG besteht aus mehreren
+Glasscheiben mit PVB-Folien. Isolierglas besteht aus mehreren durch
+Gas- oder Luftschichten getrennten Scheiben.
+\quelle{[19][4]}
+\end{merksatzbox}
+
+% =================================================
+% KAPITEL 7: HOLZ UND HOLZWERKSTOFFE
+% Diesen Block vor \end{document} einfügen.
+% =================================================
+
+% =================================================
+% KAPITEL 7: HOLZ UND HOLZWERKSTOFFE
+% Diesen gesamten Block vor \end{document} einfügen.
+% =================================================
+
+\chapter{Holz und Holzwerkstoffe}
+
+\section{Allgemeines}
+
+Holz ist ein natürlicher, organischer Baustoff und zählt gemeinsam mit
+Naturstein zu den ältesten Baumaterialien der Erde. Bereits in früher
+Zeit wurde Holz für Pfahlbauten verwendet. Später kam es bei
+Fachwerkbauten zum Einsatz. 
+
+Heute wird Holz sowohl im klassischen Hochbau als auch für tragende
+Konstruktionen verwendet. Zu den im Dokument genannten
+Anwendungsgebieten zählen:
+
+\begin{itemize}
+  \item Dachstühle,
+  \item Dachausbauten,
+  \item Stiegen,
+  \item Fertighäuser,
+  \item Blockhäuser,
+  \item Hallenbauten,
+  \item Brückenkonstruktionen,
+  \item Betonschalungen,
+  \item Gerüstbau,
+  \item Pilotierungen,
+  \item kleinere Schutzbauten gegen Naturgefahren.
+\end{itemize}
+
+
+
+\subsection{Vorteile von Holz}
+
+Holz ist ein nachwachsender heimischer Rohstoff. Es ist leicht zu
+bearbeiten und besitzt gute bauphysikalische Eigenschaften.
+Insbesondere in wärmetechnischer Hinsicht besitzt Holz günstige
+Eigenschaften. 
+
+Im Verhältnis zu seiner Festigkeit ist Holz ein leichter Baustoff.
+Zusätzlich weist Holz eine hohe Biege- und Druckfestigkeit auf.
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.35\textwidth}
+  >{\raggedright\arraybackslash}p{0.45\textwidth}
+}
+\toprule
+\textbf{Vorteil} &
+\textbf{Beschreibung} \\
+\midrule
+\endhead
+
+Nachwachsender Rohstoff &
+Holz wird als heimischer und nachwachsender Rohstoff beschrieben. \\
+
+Geringes Gewicht &
+Holz ist im Verhältnis zu seiner Festigkeit ein leichter Baustoff. \\
+
+Bearbeitbarkeit &
+Holz lässt sich leicht bearbeiten. \\
+
+Mechanische Eigenschaften &
+Holz weist eine hohe Biege- und Druckfestigkeit auf. \\
+
+Bauphysikalische Eigenschaften &
+Holz besitzt insbesondere günstige wärmetechnische Eigenschaften. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\subsection{Nachteile von Holz}
+
+Holz schwindet und quillt. Bei schwankender Luftfeuchtigkeit arbeitet
+unzureichend getrocknetes Holz. Bei zu schneller Trocknung kann es zu
+Rissbildungen kommen. 
+
+Da Holz ein natürlich wachsender Rohstoff ist, sind seine Abmessungen
+begrenzt und seine Festigkeitseigenschaften inhomogen. Holz ist
+außerdem brennbar sowie anfällig gegenüber Fäulnis und Zerstörung durch
+Insekten. 
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.35\textwidth}
+  >{\raggedright\arraybackslash}p{0.45\textwidth}
+}
+\toprule
+\textbf{Nachteil} &
+\textbf{Beschreibung} \\
+\midrule
+\endhead
+
+Quellen und Schwinden &
+Holz verändert sein Volumen bei Änderung des Feuchtegehalts. \\
+
+Rissbildung &
+Bei zu schneller Trocknung können Risse entstehen. \\
+
+Begrenzte Abmessungen &
+Holz ist ein natürlich wachsender Rohstoff; seine Abmessungen sind
+begrenzt. \\
+
+Inhomogene Festigkeit &
+Die Festigkeitseigenschaften können unterschiedlich sein. \\
+
+Brennbarkeit &
+Holz ist ein brennbarer Baustoff. \\
+
+Biologische Anfälligkeit &
+Ohne geeignete Maßnahmen kann Holz durch Fäulnis, Pilze und Insekten
+geschädigt werden. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Holz besitzt ein günstiges Verhältnis von Festigkeit zu Gewicht und
+gute wärmetechnische Eigenschaften. Nachteile sind insbesondere
+Feuchtebedingte Volumenänderungen, Rissbildung, Brennbarkeit und die
+Anfälligkeit gegenüber biologischen Schädigungen.
+
+\end{merksatzbox}
+
+\section{Holzfeuchte}
+
+Die Holzfeuchte ist eines der wichtigsten Beschreibungsmerkmale von
+Holz. Sie beeinflusst unter anderem Festigkeit, Verformbarkeit und
+Masse. 
+
+Der Feuchtegehalt beschreibt den prozentuellen Anteil des enthaltenen
+Wassers bezogen auf die darrtrockene Masse:
+
+\begin{equation}
+  u =
+  \frac{m_u - m_{\mathrm{dtr}}}
+  {m_{\mathrm{dtr}}}
+  \cdot 100
+  \,[\%]
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $u$: Feuchtegehalt in Prozent,
+  \item $m_u$: Masse des Holzes im feuchten Zustand,
+  \item $m_{\mathrm{dtr}}$: Masse des Holzes im darrtrockenen Zustand.
+\end{itemize}
+
+
+
+\subsection{Grenzzustände des Systems Holz--Wasser}
+
+Das Dokument unterscheidet darrtrockenes Holz, Fasersättigung und
+Wassersättigung.
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.28\textwidth}
+  >{\raggedright\arraybackslash}p{0.52\textwidth}
+}
+\toprule
+\textbf{Zustand} &
+\textbf{Beschreibung} \\
+\midrule
+\endhead
+
+Darrtrocken &
+Es ist kein Wasser im Holz vorhanden. Die Holzfeuchte beträgt
+$0\,\%$. \\
+
+Fasersättigung &
+Das Mikrosystem der Zellwand ist vollständig mit Wasser gefüllt. Die
+Holzfeuchte liegt ungefähr bei $28$ bis $32\,\%$. \\
+
+Wassersättigung &
+Mikro- und Makrosystem des Holzes sind maximal mit Wasser gefüllt. Die
+Holzfeuchte kann je nach Holzdichte zwischen $31\,\%$ bei Pockholz und
+$770\,\%$ bei Balsa liegen. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+Zwischen darrtrockenem und fasergesättigtem Zustand stellt sich ein
+Feuchtegleichgewicht ein. Dabei passt sich die Holzfeuchte an die
+relative Luftfeuchtigkeit an. Dieser Bereich ist von der
+Lufttemperatur abhängig. 
+
+\subsection{Quellen und Schwinden}
+
+Wenn Holz Feuchtigkeit verliert, verkleinert sich sein Volumen. Dieser
+Vorgang wird als Schwinden bezeichnet. Nimmt Holz Wasser auf, vergrößert
+sich sein Volumen; dies wird Quellen genannt. 
+
+Das Schwinden beginnt, sobald der Feuchtegehalt unter die Fasersättigung
+sinkt. Dies liegt bei einer Holzfeuchte von ungefähr weniger als
+$30\,\%$. Starkes Schwinden kann zu Rissbildungen führen.
+
+
+Holz weist in unterschiedlichen Schnittrichtungen ein unterschiedlich
+starkes Quell- und Schwindverhalten auf. Das Quellen und Schwinden ist
+in Tangentialrichtung größer als in Radialrichtung. Das Werfen des
+Holzes wird auf dieses unterschiedliche Verhalten zurückgeführt.
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Quellen und Schwinden von Holz}
+
+Bei abnehmender Holzfeuchte verkleinert sich das Holzvolumen. Dieser
+Vorgang wird Schwinden genannt. Bei zunehmender Holzfeuchte vergrößert
+sich das Holzvolumen; dieser Vorgang wird Quellen genannt.
+
+Das Quell- und Schwindverhalten ist richtungsabhängig. In
+Tangentialrichtung treten stärkere Verformungen auf als in
+Radialrichtung. Dadurch kann sich Holz verformen oder werfen.
+\end{darstellungsbox}
+
+\section{Mechanische Eigenschaften}
+
+Die maßgebliche Kenngröße der mechanischen Eigenschaften ist die
+Festigkeit. Sie ist als jene Grenzspannung definiert, bei der ein
+Prüfkörper unter Belastung versagt. 
+
+Das Dokument unterscheidet folgende Festigkeitsarten:
+
+\begin{itemize}
+  \item Zugfestigkeit,
+  \item Druckfestigkeit,
+  \item Biegefestigkeit,
+  \item Scherfestigkeit,
+  \item Spaltfestigkeit,
+  \item Torsionsfestigkeit.
+\end{itemize}
+
+
+
+Für die Bemessung von Holzbauteilen sind Zug-, Druck- und
+Biegefestigkeit besonders wichtig. Holz weist in Faserrichtung und quer
+zur Faserrichtung stark unterschiedliche Festigkeiten auf.
+
+
+\subsection{Zugfestigkeit}
+
+Die Zugfestigkeit wird als Bruchkraft bezogen auf die
+Querschnittsfläche definiert:
+
+\begin{equation}
+  \sigma_{\mathrm{ZB}} =
+  \frac{F_{\mathrm{max}}}{A}
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $\sigma_{\mathrm{ZB}}$: Zugfestigkeit in
+  $\mathrm{N/mm^2}$,
+  \item $F_{\mathrm{max}}$: Bruchkraft in $\mathrm{N}$,
+  \item $A$: Querschnittsfläche in $\mathrm{mm^2}$.
+\end{itemize}
+
+
+
+Die Zugfestigkeit senkrecht zur Faserrichtung beträgt lediglich etwa
+$5$ bis $10\,\%$ der Zugfestigkeit in Faserrichtung. Querzug-
+beanspruchungen sollen im Holzbau daher möglichst vermieden werden.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Die Zugfestigkeit von Holz senkrecht zur Faser beträgt nur ungefähr
+$5$ bis $10\,\%$ der Zugfestigkeit in Faserrichtung. Querzug-
+beanspruchungen sind im Holzbau daher weitgehend zu vermeiden.
+
+\end{merksatzbox}
+
+\section{Bestand und Nutzung in Österreich}
+
+In Österreich sind ungefähr $48\,\%$ der Staatsfläche Wald. Dies
+entspricht einer Waldfläche von ungefähr $40\,000\,\mathrm{km^2}$.
+
+
+Der österreichische Waldbestand setzt sich laut Dokument zusammen aus:
+
+\begin{itemize}
+  \item $60{,}5\,\%$ Nadelholz,
+  \item $25{,}3\,\%$ Laubholz,
+  \item $14{,}2\,\%$ sonstigem Holz.
+\end{itemize}
+
+
+
+Fichte ist mit ungefähr $46{,}2\,\%$ der Gesamtwaldfläche die
+dominierende Baumart. Die Rotbuche ist mit einem Anteil von
+$10{,}5\,\%$ der am stärksten vertretene Laubbaum.
+
+
+Der jährliche Holzzuwachs im österreichischen Ertragswald beträgt laut
+Dokument ungefähr:
+
+\begin{equation}
+  29{,}2\,\text{Mio.\ Vorratsfestmeter}
+\end{equation}
+
+
+
+\section{Struktur und Aufbau von Holz}
+
+Holz wird grundsätzlich in Laubholz und Nadelholz unterschieden. Zur
+Bestimmung der Holzart und ihrer Eigenschaften werden anatomische
+Unterschiede anhand unterschiedlicher Schnittrichtungen untersucht.
+
+
+Die wesentlichen Schnittrichtungen sind:
+
+\begin{itemize}
+  \item Querschnitt,
+  \item Tangentialschnitt,
+  \item Radialschnitt.
+\end{itemize}
+
+
+
+\subsection{Anatomie des Stammes}
+
+Im Zentrum des Stammes verläuft in Stammlängsrichtung der Markstrang.
+Dieser ist in frühen Stadien für die Nährstoffversorgung verantwortlich.
+
+
+Um das Mark herum liegen die Jahresringe. Ein Jahresring besteht aus
+Frühholz und Spätholz und beschreibt den jährlichen Zuwachs des
+Baumes. 
+
+Frühholz entsteht im Frühjahr und dient vor allem der Wasserversorgung.
+Spätholz bildet sich in den Sommer- und Herbstmonaten, erhöht die
+Festigkeit und erscheint aufgrund von Dichteunterschieden dunkler.
+
+
+Außen am Holz liegt das Kambium. Dort erfolgt durch Zellteilung das
+Dickenwachstum des Baumes. Außen an das Kambium grenzt der Bast, auch
+Innenrinde genannt. Die Borke schützt den Stamm vor mechanischen,
+tierischen und menschlichen Einflüssen. 
+
+Holzstrahlen verlaufen in radialer Richtung. Sie dienen dem Transport
+und der Speicherung von Nährstoffen. 
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.27\textwidth}
+  >{\raggedright\arraybackslash}p{0.53\textwidth}
+}
+\toprule
+\textbf{Bestandteil} &
+\textbf{Funktion oder Beschreibung} \\
+\midrule
+\endhead
+
+Markstrang &
+Verläuft im Zentrum des Stammes; ist in frühen Entwicklungsstadien für
+die Nährstoffversorgung verantwortlich. \\
+
+Frühholz &
+Entsteht im Frühjahr und dient der Wasserversorgung. \\
+
+Spätholz &
+Entsteht im Sommer und Herbst; ist festigkeitssteigernd und erscheint
+dunkler. \\
+
+Kambium &
+Bereich des Dickenwachstums durch Zellteilung. \\
+
+Bast &
+Innenrinde; liegt außen am Kambium. \\
+
+Borke &
+Schützt den Stamm und besteht aus abgestorbenem Bastgewebe. \\
+
+Holzstrahlen &
+Dienen dem radialen Transport und der Speicherung von Nährstoffen. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\subsection{Chemische Zusammensetzung}
+
+Holz ist ein natürlicher organischer Werkstoff mit einer komplexen
+Struktur aus Makromolekülen. Der Wassergehalt kann zwischen
+$15$ und $50\,\%$ schwanken. Ohne Wasser gliedert sich Holz laut
+Dokument in:
+
+\begin{itemize}
+  \item Zellulose und Hemizellulose: $70\,\%$,
+  \item Lignin: $25\,\%$,
+  \item Extraktstoffe: $5\,\%$.
+\end{itemize}
+
+
+
+Zellulose, Hemizellulose und begleitende Kohlenhydrate bilden die
+Gerüstsubstanz des Holzes. Lignin bildet die Kittsubstanz zwischen
+diesen Bestandteilen. 
+
+Extraktstoffe können beispielsweise Harze, Fette, Wachse, Farb- und
+Gerbstoffe sein. Sie können chemische, biologische und physikalische
+Eigenschaften wie Lichtbeständigkeit, Brandverhalten oder
+Schädlingsresistenz beeinflussen. 
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.30\textwidth}
+  >{\centering\arraybackslash}p{0.23\textwidth}
+  >{\raggedright\arraybackslash}p{0.28\textwidth}
+}
+\toprule
+\textbf{Bestandteil} &
+\textbf{Anteil ohne Wasser} &
+\textbf{Bedeutung} \\
+\midrule
+\endhead
+
+Zellulose und Hemizellulose &
+ca.\ $70\,\%$ &
+Gerüstsubstanz des Holzes. \\
+
+Lignin &
+ca.\ $25\,\%$ &
+Kittsubstanz zwischen den Gerüstbestandteilen. \\
+
+Extraktstoffe &
+ca.\ $5\,\%$ &
+Beispielsweise Harze, Fette, Wachse, Farb- und Gerbstoffe. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+Die wichtigsten chemischen Elemente des Holzes sind Kohlenstoff,
+Sauerstoff, Wasserstoff und Stickstoff.
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.30\textwidth}
+  >{\centering\arraybackslash}p{0.18\textwidth}
+  >{\centering\arraybackslash}p{0.22\textwidth}
+}
+\toprule
+\textbf{Element} &
+\textbf{Chemisches Zeichen} &
+\textbf{Gewichtsanteil} \\
+\midrule
+\endhead
+
+Kohlenstoff &
+C &
+ca.\ $50\,\%$ \\
+
+Sauerstoff &
+O &
+ca.\ $43\,\%$ \\
+
+Wasserstoff &
+H &
+ca.\ $6\,\%$ \\
+
+Stickstoff &
+N &
+ca.\ $0{,}6\,\%$ \\
+
+Mineralstoffe &
+-- &
+ca.\ $0{,}2\,\%$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Massivholz und Bauholzarten}
+
+Für Bauholz werden in Österreich sowohl Nadelhölzer als auch Laubhölzer
+verwendet. Häufig eingesetzte Holzarten sind Fichte, Kiefer, Lärche,
+Eiche und Buche. 
+
+\subsection{Nadelhölzer}
+
+Fichte ist gemessen an ihrem Anteil im Ertragswald die wichtigste
+Baumart in Österreich. Fichtenholz ist leicht, weich und mäßig
+schwindend. Seine Darrdichte beträgt ungefähr:
+
+\begin{equation}
+  \rho_{\mathrm{dtr}} \approx 410\,\mathrm{kg/m^3}
+\end{equation}
+
+Fichte weist eine relativ hohe Druck- und Biegefestigkeit auf, ist
+jedoch gegenüber Fäulnis und Schädlingen anfällig. 
+
+Kiefernholz besitzt eine Darrdichte von ungefähr:
+
+\begin{equation}
+  \rho_{\mathrm{dtr}} \approx 530\,\mathrm{kg/m^3}
+\end{equation}
+
+Es besitzt hinsichtlich der Widerstandsfähigkeit Vorteile gegenüber
+Fichte. 
+
+Lärchenholz besitzt eine Darrdichte von ungefähr:
+
+\begin{equation}
+  \rho_{\mathrm{dtr}} \approx 550\,\mathrm{kg/m^3}
+\end{equation}
+
+Lärche besitzt gute Festigkeitseigenschaften. Aufgrund ihres
+Harzreichtums gilt sie als dauerhaft und gegenüber Schädlingen relativ
+beständig. 
+
+\subsection{Laubhölzer}
+
+Eiche zählt zu den schweren und harten Hölzern. Ihre Darrdichte beträgt
+ungefähr:
+
+\begin{equation}
+  \rho_{\mathrm{dtr}} \approx 670\,\mathrm{kg/m^3}
+\end{equation}
+
+Die Dauerhaftigkeit von Eichenholz wird auf den hohen Gerbsäuregehalt
+und einen pH-Wert von ungefähr $3{,}5$ zurückgeführt. 
+
+Buche ist ebenfalls ein schweres und hartes Holz. Ihre Darrdichte
+beträgt ungefähr:
+
+\begin{equation}
+  \rho_{\mathrm{dtr}} \approx 680\,\mathrm{kg/m^3}
+\end{equation}
+
+Buchenholz schwindet stark und ist eher fäulnisempfindlich, besitzt
+jedoch höhere Festigkeiten als Fichte. 
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.24\textwidth}
+  >{\centering\arraybackslash}p{0.23\textwidth}
+  >{\raggedright\arraybackslash}p{0.35\textwidth}
+}
+\toprule
+\textbf{Holzart} &
+\textbf{Darrdichte} &
+\textbf{Ausgewählte Eigenschaften} \\
+\midrule
+\endhead
+
+Fichte &
+ca.\ $410\,\mathrm{kg/m^3}$ &
+Leicht, weich, mäßig schwindend; relativ hohe Druck- und
+Biegefestigkeit. \\
+
+Kiefer &
+ca.\ $530\,\mathrm{kg/m^3}$ &
+Harzreich; gegenüber Fichte widerstandsfähiger. \\
+
+Lärche &
+ca.\ $550\,\mathrm{kg/m^3}$ &
+Gute Festigkeit; harzreich, dauerhaft und relativ schädlingsbeständig. \\
+
+Eiche &
+ca.\ $670\,\mathrm{kg/m^3}$ &
+Schwer, hart und dauerhaft. \\
+
+Buche &
+ca.\ $680\,\mathrm{kg/m^3}$ &
+Schwer und hart; schwindet stark und ist eher fäulnisempfindlich. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Holzfehler}
+
+Als natürlich wachsender Rohstoff ist Holz während des Wachstums
+verschiedenen Beanspruchungen und Einwirkungen ausgesetzt. Dadurch
+entstehen Holzfehler, die den Gebrauchswert vermindern oder Holz für
+bestimmte Anwendungen unbrauchbar machen können. 
+
+\subsection{Fehler der Stammform}
+
+Baumart, Klima und Standort beeinflussen die Stammform. Ein möglichst
+vollholziger und sich nur allmählich verjüngender Stamm wird als
+günstig angesehen. 
+
+Das Dokument nennt insbesondere:
+
+\begin{itemize}
+  \item Drehwuchs,
+  \item Abholzigkeit,
+  \item Krummschäftigkeit,
+  \item Zwieselwuchs.
+\end{itemize}
+
+
+
+Drehwuchs kann bei stärkerer Ausprägung zur Nichteignung als Bauholz
+führen. Krummschäftigkeit bewirkt eine bedeutende Wertminderung.
+
+
+\subsection{Fehler des Stammquerschnitts}
+
+Ein gleichmäßiger und runder Stammquerschnitt ist erwünscht. Häufige
+Fehler des Stammquerschnitts sind:
+
+\begin{itemize}
+  \item exzentrischer Wuchs,
+  \item Rotkernigkeit,
+  \item spanrückiger Wuchs,
+  \item Zwieselbildung.
+\end{itemize}
+
+
+
+\subsection{Ästigkeit}
+
+Der Astanteil eines Baumes ist stark vom Standort abhängig. In dichten
+Beständen können relativ hohe astfreie Stämme entstehen, da untere Äste
+aufgrund von Lichtmangel absterben. 
+
+Das Dokument unterscheidet weiße und schwarze Äste:
+
+\begin{itemize}
+  \item Weiße Äste sind zum Fällzeitpunkt noch lebendig und fest mit
+  dem Stammholz verwachsen.
+
+  \item Schwarze Äste sind abgestorben und durch das Dickenwachstum in
+  das Stammholz eingewachsen.
+\end{itemize}
+
+
+
+Werden abgestorbene eingewachsene Äste während der Verarbeitung
+angeschnitten, können sie herausfallen. Diese Durchfalläste sind nicht
+erwünscht. 
+
+\subsection{Weitere Holzfehler}
+
+Fehler infolge äußerer Einwirkung sind beispielsweise Wundschäden,
+Frostrisse, Schwindrisse, Risse in den Jahresringen und Kernrisse.
+
+
+Holzfehler können auch durch Schädlingsbefall entstehen. Insekten können
+Fraßgänge verursachen; Pilzbefall kann Braunfäule oder Weißfäule
+hervorrufen. 
+
+\section{Sortierung und Festigkeitsklassen}
+
+Die Sortierung von Vollholz erfolgt hinsichtlich der Tragfähigkeit und
+deren Einflussfaktoren. Sie kann visuell oder maschinell erfolgen.
+
+
+Visuell sortiertes Holz wird in Sortierklassen mit dem Kürzel
+\texttt{S} eingeordnet. Maschinell sortiertes Holz wird mit dem Kürzel
+\texttt{MS} bezeichnet. 
+
+Beispiele für Sortiermerkmale sind:
+
+\begin{itemize}
+  \item Äste,
+  \item Jahrringbreite,
+  \item Risse,
+  \item Faserneigung,
+  \item Verfärbung,
+  \item Insektenbefall,
+  \item Rohdichte,
+  \item Holzfeuchtigkeit.
+\end{itemize}
+
+
+
+Die Festigkeitsklassen für Bauholz werden nach EN~338 angegeben. Für
+Nadelholz nennt das Dokument beispielsweise die Klassen \texttt{C16},
+\texttt{C24}, \texttt{C30}, \texttt{C35} und \texttt{C40}.
+
+
+Für Laubholz werden unter anderem die Klassen \texttt{D30},
+\texttt{D35}, \texttt{D40}, \texttt{D50}, \texttt{D60} und
+\texttt{D70} genannt. 
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Holz ist ein Naturprodukt mit unterschiedlichen Eigenschaften. Deshalb
+wird Bauholz visuell oder maschinell sortiert und einer
+Festigkeitsklasse nach EN~338 zugeordnet.
+
+\end{merksatzbox}
+
+\section{Holzwerkstoffe}
+
+Holzwerkstoffe sind weiterverarbeitete Produkte, deren
+Materialeigenschaften während der Produktion beeinflusst werden können.
+
+
+Das Dokument unterscheidet folgende Gruppen:
+
+\begin{itemize}
+  \item Werkstoffe auf Vollholzbasis,
+  \item Werkstoffe auf Furnierbasis,
+  \item Werkstoffe auf Spanbasis,
+  \item Werkstoffe auf Faserbasis,
+  \item Verbundwerkstoffe.
+\end{itemize}
+
+
+
+\subsection{Werkstoffe auf Vollholzbasis}
+
+Wichtige Vertreter der Werkstoffe auf Vollholzbasis sind
+Brettschichtholz und Massivholzplatten. 
+
+Brettschichtholz besteht aus mindestens drei Brettern mit einer
+maximalen Dicke von $30\,\mathrm{mm}$. Die Bretter werden an den
+Breitseiten verleimt; die Längsstöße werden keilverzinkt.
+
+
+Ein Vorteil von Brettschichtholz besteht darin, dass Störungen wie Äste
+oder Risse vor der Verarbeitung entfernt werden können. Dadurch sind
+bessere Werte für die Tragfähigkeit möglich. 
+
+Mit Brettschichtholz können Längen bis zu $35\,\mathrm{m}$ und Höhen
+bis zu $2{,}2\,\mathrm{m}$ erreicht werden. Auch gekrümmte und
+geknickte Träger sind herstellbar. 
+
+\subsection{Massivholzplatten und Brettsperrholz}
+
+Massivholzplatten bestehen aus Holzteilen mit einer Breite von mehr als
+$18\,\mathrm{mm}$, die faserparallel miteinander verleimt werden.
+
+
+Mehrschichtige Massivholzplatten bestehen in der Regel aus drei, vier
+oder fünf Schichten. Der Aufbau ist symmetrisch und besitzt zwei
+Decklagen sowie eine Mittellage. 
+
+Brettsperrholz besteht aus einer ungeraden Anzahl von mindestens drei
+Schichten. Jede zweite Schicht ist um $90^\circ$ gedreht. Dadurch sind
+die Platten homogener und formstabiler. 
+
+\subsection{Werkstoffe auf Furnierbasis}
+
+Ein Furnier ist eine Platte mit einer Dicke von:
+
+\begin{equation}
+  0{,}5 \text{ bis } 8\,\mathrm{mm}
+\end{equation}
+
+Furniere werden durch Schälen oder Sägen gewonnen. Werden mehrere
+Furnierlagen verleimt, entsteht Furnierschichtholz. 
+
+Bei einem mindestens dreilagigen kreuzweise verleimten Aufbau wird von
+Sperrholz gesprochen. Sperrholz besitzt eine höhere Formstabilität.
+
+
+\subsection{Werkstoffe auf Spanbasis}
+
+Holzwerkstoffe auf Spanbasis bestehen aus Holzspänen und anderen
+holzartigen Faserstoffen. Durch Verleimen mit Kunstharz unter Wärme und
+Druck entsteht ein plattenförmiger Werkstoff. 
+
+Spanplatten können über ihren Querschnitt ein Dichteprofil besitzen, um
+hohe Festigkeiten bei geringerem Gewicht zu ermöglichen. 
+
+Aufgrund der verwendeten Kunstharze kann Formaldehyd an die
+Umgebungsluft abgegeben werden. Für Bauholz und Möbelbau ist die
+Formaldehydabgabe laut Dokument auf:
+
+\begin{equation}
+  0{,}1\,\mathrm{ppm}
+\end{equation}
+
+begrenzt. 
+
+\subsection{Werkstoffe auf Faserbasis}
+
+Holzfaserplatten entstehen durch Zusammenpressen und Entwässern eines
+Holzfaserbreies. Das Holz wird zuvor unter Dampf mechanisch zerkleinert
+und in Fasern aufgespalten. 
+
+Die Einteilung erfolgt häufig nach Rohdichte:
+
+\begin{itemize}
+  \item Weichfaserplatten: $\rho \leq 450\,\mathrm{kg/m^3}$,
+  \item mittelharte Holzfaserplatten,
+  \item Hartfaserplatten: $\rho > 900\,\mathrm{kg/m^3}$.
+\end{itemize}
+
+
+
+\subsection{Verbundwerkstoffe}
+
+Verbundwerkstoffe entstehen durch die Kombination verschiedener
+Materialien. Dadurch können Vorteile einzelner Materialien kombiniert
+und Schwächen ausgeglichen werden. 
+
+Bei Holzverbundwerkstoffen bestehen die Baustoffe meist aus beidseitigen
+Decklagen und einer Mittellage aus einem anderen Material.
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.30\textwidth}
+  >{\raggedright\arraybackslash}p{0.50\textwidth}
+}
+\toprule
+\textbf{Gruppe der Holzwerkstoffe} &
+\textbf{Beispiele und Beschreibung} \\
+\midrule
+\endhead
+
+Vollholzbasis &
+Brettschichtholz, Massivholzplatten, Brettsperrholz. \\
+
+Furnierbasis &
+Furnierschichtholz, Sperrholz. \\
+
+Spanbasis &
+Spanplatten, OSB-Platten und weitere Spanwerkstoffe. \\
+
+Faserbasis &
+Weichfaserplatten, mittelharte Holzfaserplatten, Hartfaserplatten. \\
+
+Verbundwerkstoffe &
+Werkstoffe mit Decklagen und Mittellage aus unterschiedlichen
+Materialien. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Beständigkeit}
+
+Die Dauerhaftigkeit von Holz wird durch die Wahl der Holzart und durch
+äußere Einflüsse bestimmt. 
+
+Als sehr dauerhaft werden im Dokument Lärche, Eiche und Ulme genannt.
+Fichte, Kiefer, Tanne und Buche besitzen eine gut ausgeprägte
+Dauerhaftigkeit. Ahorn, Birke, Pappel und Weide schneiden hinsichtlich
+der Dauerhaftigkeit schlecht ab. 
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.28\textwidth}
+  >{\raggedright\arraybackslash}p{0.50\textwidth}
+}
+\toprule
+\textbf{Dauerhaftigkeit} &
+\textbf{Genannte Holzarten} \\
+\midrule
+\endhead
+
+Sehr dauerhaft &
+Lärche, Eiche, Ulme \\
+
+Gut ausgeprägte Dauerhaftigkeit &
+Fichte, Kiefer, Tanne, Buche \\
+
+Geringe Dauerhaftigkeit &
+Ahorn, Birke, Pappel, Weide \\
+
+\bottomrule
+\end{longtable}
+
+
+
+Zu den holzartabhängigen Einflussfaktoren zählen:
+
+\begin{itemize}
+  \item Rohdichte,
+  \item Härte,
+  \item Kernholzanteil,
+  \item Anteil widerstandsfähigeren Spätholzes,
+  \item Porenanteil,
+  \item Harzführung,
+  \item Schnittfläche,
+  \item Holzfeuchte,
+  \item Oberflächenbehandlung,
+  \item Holzschutzmittel.
+\end{itemize}
+
+
+
+Zu den äußeren Faktoren zählen Witterung, mechanische und chemische
+Beanspruchungen, hohe Temperaturen und Brand sowie holzzerstörende
+Organismen und Pilze. 
+
+Die Beständigkeit gegenüber mechanischer Beanspruchung steigt mit
+höherer Rohdichte, höherer Härte, größerem Kernholzanteil und
+abnehmender Holzfeuchte. Außerdem besitzen stehende Jahresringe einen
+Einfluss auf die Beständigkeit gegenüber mechanischer Beanspruchung.
+
+
+\subsection{Chemische Beanspruchung}
+
+Holz ist gegen chemische Beanspruchungen vergleichsweise beständig.
+Bei pH-Werten unter $3$ oder über $10$ ist jedoch mit Holzzersetzung zu
+rechnen. 
+
+\subsection{Brandverhalten}
+
+Holz ist ein brennbarer Baustoff. Die Abbrandgeschwindigkeit hängt von
+Temperatur, Dichte, Störungen im Querschnitt wie Ästen und Rissen sowie
+vom Feuchtegehalt ab. 
+
+Bei der thermischen Zersetzung entsteht Holzkohle. Diese besitzt keine
+relevanten Festigkeiten und ist nicht tragfähig. Die
+Feuerwiderstandsfähigkeit hängt daher von der Eindringtiefe der
+Holzkohle und der Resttragfähigkeit des verbleibenden Holzquerschnitts
+ab. 
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.35\textwidth}
+  >{\centering\arraybackslash}p{0.30\textwidth}
+}
+\toprule
+\textbf{Werkstoff} &
+\textbf{Abbrandgeschwindigkeit} \\
+\midrule
+\endhead
+
+Eiche &
+$0{,}50\,\mathrm{mm/min}$ \\
+
+Fichte, auch brettschichtverleimt &
+$0{,}65\,\mathrm{mm/min}$ \\
+
+Kiefer &
+$0{,}75\,\mathrm{mm/min}$ \\
+
+Holzspannplatte &
+$0{,}70$ bis $0{,}80\,\mathrm{mm/min}$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\subsection{Biologische Beanspruchung}
+
+Biologische Holzeigenschaften beschreiben die Beständigkeit gegenüber
+holzzerstörenden Organismen und Pilzen. Diese können Holz zersetzen und
+die Eigenschaften des Bauholzes unerwünscht verändern.
+
+
+Pilzbefall ist besonders bei einer Holzfeuchte von mehr als
+$20\,\%$ und in einem Temperaturbereich von $3$ bis
+$38\,^\circ\mathrm{C}$ möglich. 
+
+Das Dokument unterscheidet holzfressende und holzbrütende Insekten.
+Holzfressende Insekten ernähren sich vor allem im Larvenstadium von im
+Bast enthaltenem Eiweiß. Holzbrütende Insekten leben meist in frischem
+Holz und züchten Pilze als Nahrungsgrundlage. 
+
+\section{Holzschutz}
+
+Zur Erhöhung der Dauerhaftigkeit und Verbesserung der
+Werkstoffeigenschaften werden Holzschutzmaßnahmen eingesetzt. Das
+Dokument unterscheidet baulichen und chemischen Holzschutz.
+
+
+\subsection{Baulicher Holzschutz}
+
+Baulicher Holzschutz umfasst konstruktive Maßnahmen zur Erhöhung der
+Lebensdauer oder Belastbarkeit. Dazu gehören insbesondere:
+
+\begin{itemize}
+  \item Auswahl geeigneter Hölzer,
+  \item Dachüberstände,
+  \item Sockelausbildungen,
+  \item Tropfnasen.
+\end{itemize}
+
+
+
+Diese Maßnahmen sollen unter anderem verhindern, dass Wasser auf
+Oberflächen oder in konstruktiven Bereichen stehen bleibt.
+
+\subsection{Chemischer Holzschutz}
+
+Chemischer Holzschutz zielt auf die Beständigkeit gegenüber
+holzzerstörenden Organismen und Pilzen. Die Schutzmittel führen dem
+Holz Stoffe zu, durch die es für Schädlinge ungenießbar wird.
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.30\textwidth}
+  >{\raggedright\arraybackslash}p{0.50\textwidth}
+}
+\toprule
+\textbf{Holzschutzart} &
+\textbf{Ziel und Beispiele} \\
+\midrule
+\endhead
+
+Baulicher Holzschutz &
+Konstruktive Maßnahmen wie geeignete Holzwahl, Dachüberstände,
+Sockelausbildungen und Tropfnasen. \\
+
+Chemischer Holzschutz &
+Verbesserung der Beständigkeit gegenüber holzzerstörenden Organismen
+und Pilzen durch Schutzmittel. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Normengrundlage}
+
+Für die Bemessung und Konstruktion von Holzbauten ist Eurocode~5
+``Bemessung und Konstruktion von Holzbauten'' heranzuziehen.
+
+
+Als österreichische Regelwerke nennt das Dokument:
+
+\begin{itemize}
+  \item ÖNORM EN 1995-1-1: Allgemeine Regeln und Regeln für den
+  Hochbau,
+  \item ÖNORM EN 1995-1-2: Allgemeine Regeln -- Bemessung für den
+  Brandfall,
+  \item ÖNORM EN 1995-2: Brücken.
+\end{itemize}
+
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Für Holzbauten ist Eurocode~5 maßgebend. Die Festigkeitsklassen für
+Bauholz werden nach EN~338 angegeben. Die Sortierung erfolgt visuell
+oder maschinell.
+
+\end{merksatzbox}
+% =================================================
+% KAPITEL 8: ASPHALT UND STRASSENBAU
+% Diesen gesamten Block vor \end{document} einfügen.
+% =================================================
+
+\chapter{Asphalt und Straßenbau}
+
+\section{Aufbau einer Straße}
+
+Der Straßenaufbau wird in Oberbau, Unterbau und Untergrund gegliedert.
+Der Oberbau umfasst die tragenden und deckenden Schichten der Straße.
+Der Unterbau besteht aus Erdbau und bildet gemeinsam mit dem Untergrund
+die Grundlage für den Straßenoberbau.
+
+
+Bei Asphaltstraßen besteht der Oberbau aus mehreren Schichten. Von oben
+nach unten sind dies üblicherweise:
+
+\begin{itemize}
+  \item Asphaltdeckschicht,
+  \item Asphaltbinderschicht,
+  \item Asphalttragschicht,
+  \item ungebundene Tragschicht beziehungsweise Frostschutzschicht,
+  \item Unterbau und Untergrund.
+\end{itemize}
+
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.33\textwidth}
+  >{\raggedright\arraybackslash}p{0.46\textwidth}
+}
+\toprule
+\textbf{Schicht} &
+\textbf{Aufgabe beziehungsweise Eigenschaft} \\
+\midrule
+\endhead
+
+Asphaltdeckschicht &
+Soll eben, griffig, dicht, verschleißfest und schubfest sein. \\
+
+Asphaltbinderschicht &
+Liegt zwischen Deckschicht und Asphalttragschicht. \\
+
+Asphalttragschicht &
+Tragende Asphaltschicht im Oberbau. \\
+
+Ungebundene Tragschicht beziehungsweise Frostschutzschicht &
+Tragfähigkeit und Frostsicherheit des Straßenaufbaus. \\
+
+Unterbau und Untergrund &
+Grundlage des gesamten Fahrbahnaufbaus. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+Die im Dokument dargestellten Schichtdicken betragen:
+
+\begin{itemize}
+  \item Asphaltdeckschicht: $1{,}5$ bis $6\,\mathrm{cm}$,
+  \item Asphaltbinderschicht: $4$ bis $10\,\mathrm{cm}$,
+  \item Asphalttragschicht: $8$ bis $20\,\mathrm{cm}$.
+\end{itemize}
+
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Fahrbahnaufbau einer Asphaltstraße}
+
+Die Darstellung zeigt den Straßenaufbau von oben nach unten. An der
+Oberfläche liegt die Asphaltdeckschicht. Darunter folgen
+Asphaltbinderschicht und Asphalttragschicht. Unter den gebundenen
+Asphaltschichten befinden sich ungebundene Tragschichten beziehungsweise
+Frostschutzschichten. Den unteren Abschluss bilden Planum, Unterbau und
+Untergrund.
+
+Der Deckschicht werden die Eigenschaften eben, griffig, dicht,
+verschleißfest und schubfest zugeordnet. Die Asphalttragschicht dient
+vor allem der Tragfähigkeit.
+\end{darstellungsbox}
+
+\section{Unterbau und Bodenstabilisierung}
+
+Der Unterbau gehört zum Erdbau. Böden können mit Bindemitteln wie Kalk,
+Zement oder Mischbindemitteln stabilisiert werden. Diese Maßnahme wird
+als Bodenverbesserung bezeichnet.
+
+
+Durch Bodenstabilisierung können laut Dokument folgende Eigenschaften
+verbessert werden:
+
+\begin{itemize}
+  \item Verdichtbarkeit,
+  \item Tragfähigkeit,
+  \item Setzungsverhalten.
+\end{itemize}
+
+
+
+Für das Unterbauplanum werden insbesondere folgende Anforderungen
+angegeben:
+
+\begin{equation}
+  E_{v1} \geq 35\,\mathrm{MN/m^2}
+\end{equation}
+
+Der Wert $E_{v1}$ ist der Verformungsmodul bei Erstbelastung und wird
+über einen Lastplattenversuch bestimmt.
+
+
+Der Verdichtungsgrad $D_{\mathrm{Pr}}$ wird mit der Proctordichte
+beschrieben:
+
+\begin{equation}
+  D_{\mathrm{Pr}}
+  =
+  \frac{\rho_a}{\rho_{\mathrm{Pr}}}
+  \cdot 100
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $D_{\mathrm{Pr}}$: erzielter Verdichtungsgrad in Prozent,
+  \item $\rho_a$: erzielte Trockendichte,
+  \item $\rho_{\mathrm{Pr}}$: Proctordichte.
+\end{itemize}
+
+Für den Unterbau wird folgende Anforderung genannt:
+
+\begin{equation}
+  D_{\mathrm{Pr}} > 100\,\%
+\end{equation}
+
+
+
+\section{Ungebundene und gebundene Tragschichten}
+
+Ungebundene Tragschichten bestehen aus Gemischen natürlicher,
+industriell hergestellter oder rezyklierter Gesteinskörnungen. Sie sind
+nach RVS 08.15.01 geregelt.
+
+
+Wesentliche Anforderungen an ungebundene Tragschichten sind:
+
+\begin{itemize}
+  \item Tragfähigkeit,
+  \item Frostsicherheit,
+  \item Verdichtbarkeit,
+  \item ausreichender Verdichtungsgrad.
+\end{itemize}
+
+
+
+Die Tragfähigkeit wird über den Verformungsmodul $E_{v1}$ im
+Lastplattenversuch beurteilt. Die Frostsicherheit wird über Korn- und
+Mineralkriterien sowie durch Frosthebungsversuche beurteilt.
+
+
+Gebundene Tragschichten werden eingesetzt, wenn Frostbeständigkeit oder
+Tragfähigkeit ungebundener Tragschichten nicht ausreichend sind. Dabei
+wird Gesteinskörnung mit einem Bindemittel gemischt.
+
+
+Als Bindemittel nennt das Dokument:
+
+\begin{itemize}
+  \item Zement,
+  \item Tragschichtbinder,
+  \item Bitumen.
+\end{itemize}
+
+
+
+\section{Asphalt als Baustoff}
+
+Asphalt besteht aus Gesteinskörnung und Bitumen. Das Dokument nennt für
+Asphalt folgende Zusammensetzung:
+
+\begin{itemize}
+  \item $93$ bis $96\,\mathrm{M.\%}$ Gestein,
+  \item $4$ bis $7\,\mathrm{M.\%}$ Bitumen,
+  \item $0{,}5$ bis $15\,\mathrm{Vol.\%}$ Hohlraum.
+\end{itemize}
+
+
+
+Die Eigenschaften von Asphalt hängen insbesondere ab von:
+
+\begin{itemize}
+  \item den Eigenschaften der Gesteinskörnung,
+  \item den Eigenschaften des Bitumens,
+  \item der Verdichtung beim Einbau,
+  \item der Temperatur beim Einbau,
+  \item der Alterung des Asphalts.
+\end{itemize}
+
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Asphalt besteht überwiegend aus Gesteinskörnung. Bitumen übernimmt die
+Aufgabe des Bindemittels. Die Eigenschaften des fertigen Asphalts
+werden wesentlich durch die Gesteinskörnung, das Bitumen sowie den
+Einbau, insbesondere Verdichtung und Temperatur, beeinflusst.
+
+\end{merksatzbox}
+
+\section{Temperaturabhängiges Materialverhalten}
+
+Das Materialverhalten von Asphalt ist temperaturabhängig. Bei tiefen
+Temperaturen verhält sich Asphalt eher elastisch und ist rissanfällig.
+Bei mittleren Temperaturen wird ein nichtlinear-elastisches Verhalten
+mit möglicher Materialermüdung beschrieben.
+
+
+Bei hohen Temperaturen verhält sich Asphalt viskos. Ab ungefähr
+$50\,^\circ\mathrm{C}$ kann Asphalt teilweise plastisch werden. Dies
+kann zur Bildung von Spurrinnen führen.
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.26\textwidth}
+  >{\raggedright\arraybackslash}p{0.31\textwidth}
+  >{\raggedright\arraybackslash}p{0.25\textwidth}
+}
+\toprule
+\textbf{Temperaturbereich} &
+\textbf{Materialverhalten} &
+\textbf{Mögliche Folge} \\
+\midrule
+\endhead
+
+Tiefe Temperaturen &
+Eher elastisch &
+Rissanfälligkeit und Rissbildung \\
+
+Mittlere Temperaturen &
+Nichtlinear elastisch &
+Materialermüdung \\
+
+Hohe Temperaturen &
+Viskos; ab ungefähr $50\,^\circ\mathrm{C}$ teilweise plastisch &
+Spurrinnenbildung \\
+
+\bottomrule
+\end{longtable}
+
+
+
+Der Elastizitätsmodul von Asphalt ist ebenfalls temperaturabhängig. Für
+Asphalt bei $18\,^\circ\mathrm{C}$ wird ein Wert von ungefähr
+
+\begin{equation}
+  E_{\mathrm{Asphalt}}
+  \approx
+  9000\,\mathrm{N/mm^2}
+\end{equation}
+
+angegeben.
+
+
+Zum Vergleich nennt das Dokument ungefähr:
+
+\begin{align}
+  E_{\mathrm{Beton}}
+  &\approx
+  30000\,\mathrm{N/mm^2}, \\
+  E_{\mathrm{Stahl}}
+  &\approx
+  210000\,\mathrm{N/mm^2}.
+\end{align}
+
+
+
+\section{Beanspruchung von Asphaltschichten}
+
+Asphalt besitzt laut Dokument einen hohen Widerstand gegenüber
+Druckbeanspruchung, versagt jedoch bei Zugbeanspruchung.
+
+
+In der Asphaltdeckschicht ist vor allem Druckbeanspruchung relevant.
+In der Asphalttragschicht ist insbesondere Zugbeanspruchung
+maßgebend.
+
+
+Der Verbund zwischen Deckschicht und Tragschicht ist wesentlich. Die
+Schichten werden dafür verklebt.
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.32\textwidth}
+  >{\raggedright\arraybackslash}p{0.47\textwidth}
+}
+\toprule
+\textbf{Bereich} &
+\textbf{Wesentliche Beanspruchung} \\
+\midrule
+\endhead
+
+Asphaltdeckschicht &
+Vor allem Druckbeanspruchung \\
+
+Asphalttragschicht &
+Vor allem Zugbeanspruchung \\
+
+Verbund zwischen Deck- und Tragschicht &
+Wesentlich für die Funktion des Aufbaus; wird durch Verklebung
+hergestellt \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Herstellung von Asphaltmischgut}
+
+Asphaltmischgut wird in einer Asphaltmischanlage hergestellt. Der
+Herstellungsprozess ist elektronisch gesteuert. Die einzelnen
+Bestandteile des Asphaltmischguts werden dosiert, erwärmt und
+miteinander vermischt.
+
+
+Als zentrale Anlagenteile nennt das Dokument:
+
+\begin{itemize}
+  \item Doseure für die grobe Einwaage der Gesteinskörnung,
+  \item Trockentrommel,
+  \item Heißversiebung mit Mehrfachdecksieb,
+  \item Mischturm,
+  \item Mineralstoffwaage,
+  \item Füllerwaage,
+  \item Mischer,
+  \item Bitumenlagertank,
+  \item Bindemitteldosierung,
+  \item Mischgutsilo.
+\end{itemize}
+
+
+
+In der Trockentrommel wird die Gesteinskörnung getrocknet und erwärmt.
+Gleichzeitig wird ein Feinstaubanteil abgetrennt. Im Mischturm erfolgt
+die genaue Dosierung der warmen Mineralstoffe; heißes Bitumen wird
+eingedüst und mit den Mineralstoffen vermischt.
+
+
+Die Mischzeit beträgt laut Dokument ungefähr:
+
+\begin{equation}
+  15\,\mathrm{s}
+\end{equation}
+
+Das frische Mischgut verlässt die Anlage meist mit einer Temperatur von:
+
+\begin{equation}
+  160 \text{ bis } 180\,^\circ\mathrm{C}
+\end{equation}
+
+
+
+\section{Asphaltmischgutarten}
+
+Das Dokument unterscheidet Asphaltmischgutarten nach Einbau- und
+Mischtemperatur.
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.27\textwidth}
+  >{\centering\arraybackslash}p{0.25\textwidth}
+  >{\raggedright\arraybackslash}p{0.27\textwidth}
+}
+\toprule
+\textbf{Mischgutart} &
+\textbf{Temperaturbereich} &
+\textbf{Genannte Bindemittel} \\
+\midrule
+\endhead
+
+Kaltmischgut und Kalteinbau &
+Unter $30\,^\circ\mathrm{C}$ &
+Bitumenemulsion, Fluxbitumen, polymermodifiziertes Bitumen \\
+
+Warmeinbau &
+$40$ bis $120\,^\circ\mathrm{C}$ &
+Bitumenemulsion, Fluxbitumen, polymermodifiziertes Bitumen \\
+
+Heißmischgut und Heißeinbau &
+Über $130\,^\circ\mathrm{C}$ bis über $200\,^\circ\mathrm{C}$ &
+Straßenbaubitumen, Fluxbitumen \\
+
+\bottomrule
+\end{longtable}
+
+
+
+Der Heißeinbau ist laut Dokument das Standardverfahren. Kalt- und
+Warmeinbau werden vor allem für Reparaturzwecke eingesetzt, etwa für
+Belagssanierungen oder Spurrinnensanierungen mit Dünnschichtdecken.
+
+
+\section{Mischkonzepte für Heißmischgut}
+
+Für Heißmischgut werden unterschiedliche Mischkonzepte genannt.
+
+\subsection{Mastix-Konzept}
+
+Das Mastix-Konzept wird mit Gussasphalt verbunden. Es besitzt einen
+hohen Bindemittelgehalt und praktisch keine Hohlräume. Die
+Zuschlagsstoffe schwimmen in einer bituminösen Mörtelmatrix.
+
+
+Weitere Merkmale sind:
+
+\begin{itemize}
+  \item kontinuierliche, feinkornangereicherte Kornverteilung,
+  \item Lastabtrag hauptsächlich durch das Bindemittel,
+  \item Einsatz vor allem bei Geh- und Fahrradwegen.
+\end{itemize}
+
+
+
+Für das Mastix-Konzept wird angegeben:
+
+\begin{equation}
+  B < 8{,}5\,\mathrm{M.\%}
+\end{equation}
+
+Der Hohlraumgehalt liegt bei ungefähr:
+
+\begin{equation}
+  H \approx 0\,\mathrm{Vol.\%}
+\end{equation}
+
+
+
+\subsection{Packungs-Konzept}
+
+Das Packungs-Konzept wird auch als Betonprinzip bezeichnet und dem
+Asphaltbeton zugeordnet. Es weist eine dichte Packung mit
+kontinuierlicher Korngrößenverteilung auf.
+
+
+Die Last wird vor allem über das Stützgerüst abgetragen. Gleichzeitig
+soll ein möglichst dünner Bindemittelfilm ausgebildet werden.
+
+
+Für das Packungs-Konzept wird angegeben:
+
+\begin{align}
+  B &< 6{,}5\,\mathrm{M.\%}, \\
+  H &\approx 4\,\mathrm{Vol.\%}.
+\end{align}
+
+
+
+\subsection{Stützgerüst-Konzept}
+
+Das Stützgerüst-Konzept wird auch Makadamprinzip genannt. Es beruht auf
+einer Korn-zu-Korn-Abstützung der Gesteinskörner.
+
+
+Wesentliche Merkmale sind:
+
+\begin{itemize}
+  \item diskontinuierliche Korngrößenverteilung,
+  \item Verzahnung und innere Reibung des Korngerüsts,
+  \item sekundäre stabilisierende Aufgabe des Bindemittels,
+  \item Lastabtrag vor allem durch das Gesteinsgerüst.
+\end{itemize}
+
+
+
+Das Dokument unterscheidet zwei Arten:
+
+\begin{itemize}
+  \item dichtes Stützgerüst, beispielsweise Splittmastixasphalt,
+  \item offenporiges Stützgerüst, beispielsweise Drainasphalt oder
+  lärmdämmender Dünnschichtasphalt.
+\end{itemize}
+
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.31\textwidth}
+  >{\centering\arraybackslash}p{0.24\textwidth}
+  >{\centering\arraybackslash}p{0.22\textwidth}
+}
+\toprule
+\textbf{Mischkonzept} &
+\textbf{Bindemittelgehalt} &
+\textbf{Hohlraumgehalt} \\
+\midrule
+\endhead
+
+Mastix-Konzept &
+$B < 8{,}5\,\mathrm{M.\%}$ &
+$H \approx 0\,\mathrm{Vol.\%}$ \\
+
+Packungs-Konzept &
+$B < 6{,}5\,\mathrm{M.\%}$ &
+$H \approx 4\,\mathrm{Vol.\%}$ \\
+
+Dichtes Stützgerüst &
+$B < 7{,}5\,\mathrm{M.\%}$ &
+$H \approx 4\,\mathrm{Vol.\%}$ \\
+
+Offenporiges Stützgerüst &
+$B < 5\,\mathrm{M.\%}$ &
+$H \approx 20\,\mathrm{Vol.\%}$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Anforderungen an Asphaltmischgut}
+
+Das Dokument unterscheidet drei Gruppen von Anforderungen an
+Asphaltmischgut:
+
+\begin{itemize}
+  \item allgemeine beziehungsweise volumetrische Anforderungen,
+  \item konventionelle beziehungsweise empirische Anforderungen,
+  \item gebrauchsverhaltensorientierte Anforderungen.
+\end{itemize}
+
+
+
+Allgemeine Anforderungen umfassen:
+
+\begin{itemize}
+  \item Rohdichte,
+  \item Raumdichte,
+  \item Hohlraum des Gesteinsgerüsts,
+  \item Hohlraum im Asphalt,
+  \item Bindemittelgehalt,
+  \item Auffüllungsgrad.
+\end{itemize}
+
+
+
+Konventionelle Anforderungen beruhen auf Erfahrungswerten. Sie sind
+einfach handhabbar, leiten jedoch keine Materialkenngrößen ab.
+
+
+Gebrauchsverhaltensorientierte Anforderungen beruhen auf
+realitätsnahen Beanspruchungen. Aus ihnen können Materialkenngrößen
+abgeleitet werden, die Versuche sind jedoch komplexer.
+
+
+\subsection{Konventionelle Prüfungen}
+
+Als konventionelle Anforderungen nennt das Dokument:
+
+\begin{itemize}
+  \item Wasserempfindlichkeit nach EN 12697-12,
+  \item Abrieb durch Spikereifen nach EN 12697-16,
+  \item Affinität zwischen Gesteinskörnung und Bitumen nach
+  EN 12697-11,
+  \item Spurbildungstest nach EN 12697-22,
+  \item Treibstoffbeständigkeit nach EN 12697-43.
+\end{itemize}
+
+
+
+\section{Marshall-Prüfung}
+
+Die Marshall-Prüfung wird nach EN 12697-34 durchgeführt. Dazu werden
+Marshall-Körper hergestellt.
+
+
+Für die Herstellung wird loses Mischgut mit einer Temperatur von
+$135\,^\circ\mathrm{C}$ in eine Stahlform gefüllt. Anschließend wird
+der Probekörper im Marshall-Verdichtungsgerät auf jeder Seite mit
+jeweils 50 Schlägen eines Fallhammers verdichtet.
+
+
+Der Fallhammer fällt aus einer Höhe von:
+
+\begin{equation}
+  46\,\mathrm{cm}
+\end{equation}
+
+
+
+Mit der Marshall-Prüfung werden Marshall-Stabilität und Marshall-Fließwert
+bestimmt.
+
+
+Die Marshall-Stabilität ist der maximale Widerstand im
+Kraft-Verformungs-Diagramm und wird in Kilonewton angegeben.
+
+
+Der Marshall-Fließwert ist der Verformungsweg vom Beginn der Belastung
+bis zum Erreichen der Höchstkraft. Er wird in Millimetern angegeben.
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.33\textwidth}
+  >{\raggedright\arraybackslash}p{0.45\textwidth}
+}
+\toprule
+\textbf{Kennwert} &
+\textbf{Bedeutung} \\
+\midrule
+\endhead
+
+Marshall-Stabilität &
+Maximalwiderstand im Kraft-Verformungs-Diagramm; Einheit Kilonewton. \\
+
+Marshall-Fließwert &
+Verformungsweg vom Belastungsbeginn bis zum Erreichen der Höchstkraft;
+Einheit Millimeter. \\
+
+Marshall-Quotient &
+Verhältnis von Marshall-Stabilität zu Marshall-Fließwert. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Asphalteinbau und Verdichtung}
+
+Der Einbau von Asphalt erfolgt mit einem Fertiger. Der Fertiger leistet
+bereits einen hohen Anteil der Verdichtungsarbeit. Die weitere
+Nachverdichtung erfolgt mit Walzen.
+
+
+Die Mindestverdichtung beträgt:
+
+\begin{equation}
+  98\,\%
+  \text{ der Marshall-Dichte}
+\end{equation}
+
+
+
+Während des Einbauprozesses werden folgende Verdichtungsbereiche
+angegeben:
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.43\textwidth}
+  >{\centering\arraybackslash}p{0.29\textwidth}
+}
+\toprule
+\textbf{Bereich beziehungsweise Arbeitsschritt} &
+\textbf{Verdichtungsgrad} \\
+\midrule
+\endhead
+
+Schneckenraum &
+$74$ bis $78\,\%$ \\
+
+Vorderwand beziehungsweise Stampfer &
+$76$ bis $80\,\%$ \\
+
+Glättblech &
+$78$ bis $88\,\%$ \\
+
+Bohle &
+$86$ bis $90\,\%$ \\
+
+Nachverdichtung mit Walzen &
+$89$ bis $95\,\%$ \\
+
+Weitere Nachverdichtung mit Walzen &
+$92$ bis $98\,\%$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Planung einer Asphaltbaustelle}
+
+Asphalt muss heiß eingebaut werden. Die Temperaturgrenzen für das
+Asphaltmischgut und insbesondere die unterste Einbautemperatur müssen
+eingehalten werden. Für den Transport werden thermoisolierte
+Transportfahrzeuge genannt.
+
+
+Als Beispiele für Temperaturbereiche nennt das Dokument:
+
+\begin{itemize}
+  \item Bitumen \texttt{B70/100}: $140$ bis $180\,^\circ\mathrm{C}$,
+  \item polymermodifiziertes Bitumen: $150$ bis $190\,^\circ\mathrm{C}$.
+\end{itemize}
+
+
+
+Für die Planung und Ausführung sind insbesondere folgende Punkte zu
+berücksichtigen:
+
+\begin{itemize}
+  \item saubere und einwandfreie Unterlage,
+  \item kontinuierlicher Einbau mit dem Fertiger,
+  \item Sicherstellung des Schichtverbunds durch Vorspritzen,
+  \item Längsnähte der Fertigerbahnen nicht in der Radspur,
+  \item ausreichende Verdichtung,
+  \item ausreichende Abkühlung vor der Verkehrsfreigabe.
+\end{itemize}
+
+
+
+Vor der Verkehrsfreigabe soll die Temperatur der Asphaltdecke unter
+
+\begin{equation}
+  35\,^\circ\mathrm{C}
+\end{equation}
+
+liegen. Das Dokument empfiehlt, die Asphaltdecke möglichst über Nacht
+abkühlen zu lassen.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Vor der Verkehrsfreigabe muss die Asphaltdecke ausreichend abkühlen.
+Als Zielwert nennt das Dokument eine Asphalttemperatur von weniger als
+$35\,^\circ\mathrm{C}$.
+
+\end{merksatzbox}
+
+\section{Qualitätsprüfungen und Erhaltung}
+
+Während der Asphaltierungsarbeiten wird Mischgut entnommen. Nach der
+Fertigstellung können zerstörende und zerstörungsfreie Verfahren zur
+Qualitätsprüfung eingesetzt werden.
+
+
+Zu den zerstörenden Verfahren zählt die Bohrkernentnahme. Diese erfolgt
+laut Dokument ungefähr vier bis acht Wochen nach dem Einbau.
+
+
+Bohrkerne dienen insbesondere zur Beurteilung von:
+
+\begin{itemize}
+  \item Schichtstärke,
+  \item Schichtverbund,
+  \item Haftzug,
+  \item Mischguteigenschaften.
+\end{itemize}
+
+
+
+Eine Balkenentnahme wird nur in Sonderfällen durchgeführt.
+
+
+Nach dem Bau folgt die Erhaltung. Regelmäßige Erhaltungsmaßnahmen sind
+laut Dokument entscheidend für die Qualität einer Straße. Entscheidend
+ist, mit der richtigen Maßnahme zum richtigen Zeitpunkt einzugreifen.
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Zustandsverschlechterung und Erhaltung}
+
+Die Darstellung zeigt die Verschlechterung des Straßenzustands mit
+zunehmendem Alter. Ohne Erhaltungsmaßnahmen sinkt der Zustand
+kontinuierlich.
+
+Zwei Erhaltungsvarianten zeigen, dass rechtzeitig ausgeführte
+Erhaltungsmaßnahmen den Zustand verbessern oder die weitere
+Verschlechterung verzögern können. Als Ziel wird eine Steigerung der
+Bauqualität und eine bessere Prognose des Straßenzustands genannt.
+\end{darstellungsbox}
+
+\section{Bituminöse Tragschichten im Bahnbau}
+
+Im Bahnbau können bituminöse Tragschichten als wasserabweisende und
+lastverteilende Konstruktionsschicht direkt unterhalb der
+Schotterbettung eingesetzt werden.
+
+
+Es handelt sich dabei um Heißmischgut mit folgenden Eigenschaften:
+
+\begin{itemize}
+  \item Schichtstärke: $9$ bis $12\,\mathrm{cm}$,
+  \item Größtkorn: $32\,\mathrm{mm}$.
+\end{itemize}
+
+
+
+Die Anwendung wird insbesondere bei schlechten Bodenverhältnissen, aus
+erschütterungstechnischen Gründen und auf Hochleistungsstrecken
+genannt.
+
+
+Als Vorteil wird eine lange Lebensdauer angeführt. Als Nachteil wird
+genannt, dass der Unterbau anschließend nicht mehr mechanisch saniert
+werden kann.
+
+
+\section{Betonstraßenbau}
+
+Neben Asphaltstraßen behandelt das Dokument Betonstraßen. Betonstraßen
+weisen aufgrund ihrer mechanischen Eigenschaften eine andere
+Druckverteilung als Asphaltkonstruktionen auf.
+
+
+Für Betonstraßen wird ein Elastizitätsmodul von ungefähr
+
+\begin{equation}
+  E_{\mathrm{Beton}}
+  \approx
+  30000\,\mathrm{N/mm^2}
+\end{equation}
+
+angegeben. Der E-Modul wird als höher und konstanter als bei Asphalt
+beschrieben.
+
+
+In Österreich wird die unbewehrte Bauweise mit Betonplatten als
+Regelbauweise genannt. Die Betondecke wird dabei durch Fugen in
+einzelne Betonfelder unterteilt.
+
+
+Querfugen erhalten Dübel zur Querkraftübertragung und zur Sicherung der
+Höhenlage. Längsfugen werden mit Ankern zur Verbindung der Platten
+ausgebildet.
+
+
+Für die Betonfelder gelten laut Darstellung unter anderem folgende
+Beziehungen:
+
+\begin{align}
+  L &\leq 1{,}5 \cdot B, \\
+  L &\leq 25 \cdot D.
+\end{align}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item $L$: Feldlänge,
+  \item $B$: Feldbreite,
+  \item $D$: Dicke der Betonplatte.
+\end{itemize}
+
+
+
+Zusätzlich wird eine maximale Feldlänge von:
+
+\begin{equation}
+  L \leq 5{,}5\,\mathrm{m}
+\end{equation}
+
+angegeben.
+
+
+Bei extremen Temperaturen können sich Betonplatten ausdehnen und
+verwerfen. Das Dokument bezeichnet dieses Phänomen als
+\textit{Blow-up}. Die Oberseite einer Platte dehnt sich dabei stärker
+aus als die Unterseite. Dadurch können Wölbspannungen entstehen.
+Aufgrund des spröden Materialverhaltens kann es zu einem
+explosionsartigen Aufplatzen kommen.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Asphalt ist temperaturabhängig und kann bei hohen Temperaturen viskos
+beziehungsweise teilweise plastisch werden. Betonstraßen bestehen
+hingegen aus steiferen Betonplatten mit Fugen, Dübeln und Ankern.
+\quelle{[3][^9]}
+\end{merksatzbox}
+% =================================================
+% KAPITEL 9: MAUERWERK
+% Diesen gesamten Block vor \end{document} einfügen.
+% =================================================
+% =================================================
+% KAPITEL 9: MAUERWERK -- GRUNDLAGEN UND MAUERSTEINE
+% Diesen gesamten Block vor \end{document} einfügen.
+% =================================================
+
+\chapter{Mauerwerk}
+
+\section{Einleitung}
+
+Mauerwerk ist ein Baukörper aus Mauersteinen und Mörtel, wobei der
+Mörtel die Steine miteinander verbindet. Mauerwerk kann außerdem als
+Verbundbaustoff verstanden werden, bei dem unterschiedliche
+Mauersteine und Mörteltypen kombiniert werden, um für die jeweilige
+Nutzung geeignete Eigenschaften zu erreichen.
+
+
+Nach Eurocode~6 ist Mauerwerk definiert als:
+
+\begin{quote}
+\glqq Gefüge aus Mauersteinen, die in einem bestimmten Verband verlegt
+und mit Mörtel verbunden worden sind.\grqq
+\end{quote}
+
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Mauerwerk ist ein Verbundbaustoff aus Mauersteinen und Mörtel. Die
+Mauersteine werden in einem bestimmten Verband verlegt und durch Mörtel
+miteinander verbunden.
+
+\end{merksatzbox}
+
+\section{Aufgaben von Mauerwerksbauteilen}
+
+Mauerwerksbauteile übernehmen statische, bauphysikalische und
+architektonische Aufgaben.
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.29\textwidth}
+  >{\raggedright\arraybackslash}p{0.50\textwidth}
+}
+\toprule
+\textbf{Aufgabenbereich} &
+\textbf{Aufgaben von Mauerwerk} \\
+\midrule
+\endhead
+
+Statische Aufgaben &
+Ableiten von Lasten, Ausbildung von End- oder Zwischenauflagern,
+Aussteifung des gesamten Bauwerks sowie rissfreie Aufnahme von
+Verformungen. \\
+
+Bauphysikalische Aufgaben &
+Wärmeschutz, Schallschutz, Brandschutz und Witterungsschutz. \\
+
+Architektonische Aufgaben &
+Gestaltung von Oberflächen, optische Gliederung von Bauwerken und
+Raumabschluss. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Mauersteine}
+
+Ein Mauerstein ist ein vorgefertigtes Bauteil zur Verwendung im
+Mauerwerksbau. Mauersteine können grundsätzlich in natürliche und
+künstlich hergestellte Steine eingeteilt werden.
+
+
+Natursteine werden durch Bearbeitung einer Fachkraft für den
+Mauerwerksbau vorbereitet. Bei künstlich hergestellten Steinen erfolgt
+die Herstellung in einem industriellen Herstellungsprozess.
+
+
+\subsection{Natürliche Steine}
+
+Natursteinmauerwerk besteht aus natürlichen Steinen beziehungsweise
+Naturbruchsteinen. Natursteine können bearbeitet oder weitgehend
+unbearbeitet verwendet werden. Die Wahl der Steinart hängt vom
+Vorkommen, vom Einsatzgebiet und vom gewünschten Mauerwerkstyp ab.
+
+
+Das Dokument nennt unter anderem folgende Arten von
+Natursteinmauerwerk:
+
+\begin{itemize}
+  \item Trockenmauerwerk,
+  \item Zyklopenmauerwerk,
+  \item Bruchsteinmauerwerk,
+  \item unregelmäßiges Schichtenmauerwerk,
+  \item hammerrechtes Schichtenmauerwerk,
+  \item regelmäßiges Schichtenmauerwerk.
+\end{itemize}
+
+
+
+Trockenmauerwerk wird ohne Mörtel errichtet. Es besteht in vielen Fällen
+aus Natursteinen oder Naturbruchsteinen. Heute wird es vor allem in
+Gartenanlagen, bei groben steinigen Hangsicherungen und im Wasserbau
+eingesetzt.
+
+
+\subsection{Künstlich hergestellte Steine}
+
+Künstlich hergestellte Mauersteine werden in keramische und mineralisch
+gebundene Steine unterteilt.
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.32\textwidth}
+  >{\raggedright\arraybackslash}p{0.47\textwidth}
+}
+\toprule
+\textbf{Gruppe} &
+\textbf{Beispiele} \\
+\midrule
+\endhead
+
+Keramische Steine &
+Mauerziegel, Klinker und feuerfeste keramische Baustoffe. \\
+
+Mineralisch gebundene Steine &
+Kalksandsteine, Hüttensteine, Gasbetonsteine und Betonsteine. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\section{Eigenschaften von Mauersteinen}
+
+Die Eigenschaften von Mauersteinen hängen vom Zusammenspiel der
+Rohstoffe, der Materialstruktur und des Herstellungsverfahrens ab.
+Diese Faktoren beeinflussen Gewicht, Rohdichte, statische und
+bauphysikalische Eigenschaften sowie die Eignung für bestimmte
+Anwendungsbereiche.
+
+
+\subsection{Rohdichte}
+
+Die Rohdichte beschreibt das Raumgewicht eines Mauersteins.
+Hohlkammern, Löcher, Nuten, Federn und Schlitze werden dabei
+berücksichtigt.
+
+
+Die Rohdichte wird in \(\mathrm{kg/dm^3}\) angegeben. Die
+Rohdichteklassen reichen bei genormten Steinen von:
+
+\begin{equation}
+  0{,}5 \text{ bis } 2{,}2\,\mathrm{kg/dm^3}
+\end{equation}
+
+Die Zahlenwerte beschreiben jeweils die obere Grenze der
+Rohdichteklasse.
+
+
+Die Rohdichte hat einen wesentlichen Einfluss auf:
+
+\begin{itemize}
+  \item die Wärmedämmung,
+  \item die Schalldämmung,
+  \item das Stückgewicht,
+  \item die Arbeitsleistung bei der Errichtung eines Bauwerks.
+\end{itemize}
+
+
+
+\subsection{Druckfestigkeit}
+
+Die Festigkeit ist bei Mauersteinen eine wesentliche Kenngröße. Sie
+beeinflusst gemeinsam mit der Festigkeit des Mörtels die
+Gesamtfestigkeit der Wände eines Bauwerks.
+
+
+Die Festigkeit wird als Druckfestigkeit in \(\mathrm{N/mm^2}\)
+beziehungsweise \(\mathrm{MPa}\) angegeben. Sie wird durch einen
+Druckversuch bestimmt.
+
+
+Bei genormten Ziegeln ist die Druckfestigkeit in Klassen eingeteilt.
+Die Klassenbezeichnung entspricht dabei dem geringsten Wert, den ein
+Ziegel dieser Klasse aufweisen muss.
+
+
+\begin{longtable}{
+  >{\centering\arraybackslash}p{0.25\textwidth}
+  >{\centering\arraybackslash}p{0.25\textwidth}
+  >{\centering\arraybackslash}p{0.25\textwidth}
+}
+\toprule
+\textbf{Druckfestigkeitsklasse} &
+\textbf{Mittelwert} &
+\textbf{Kleinster Einzelwert} \\
+\midrule
+\endhead
+
+2 &
+$2{,}5\,\mathrm{N/mm^2}$ &
+$2{,}0\,\mathrm{N/mm^2}$ \\
+
+4 &
+$5{,}0\,\mathrm{N/mm^2}$ &
+$4{,}0\,\mathrm{N/mm^2}$ \\
+
+6 &
+$7{,}5\,\mathrm{N/mm^2}$ &
+$6{,}0\,\mathrm{N/mm^2}$ \\
+
+12 &
+$15{,}0\,\mathrm{N/mm^2}$ &
+$12{,}0\,\mathrm{N/mm^2}$ \\
+
+20 &
+$25{,}0\,\mathrm{N/mm^2}$ &
+$20{,}0\,\mathrm{N/mm^2}$ \\
+
+28 &
+$35{,}0\,\mathrm{N/mm^2}$ &
+$28{,}0\,\mathrm{N/mm^2}$ \\
+
+36 &
+$45{,}0\,\mathrm{N/mm^2}$ &
+$36{,}0\,\mathrm{N/mm^2}$ \\
+
+48 &
+$60{,}0\,\mathrm{N/mm^2}$ &
+$48{,}0\,\mathrm{N/mm^2}$ \\
+
+60 &
+$75{,}0\,\mathrm{N/mm^2}$ &
+$60{,}0\,\mathrm{N/mm^2}$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\subsection{Stückgewicht}
+
+Das Stückgewicht eines Mauersteins wird wesentlich durch Art, Anzahl
+und Größe der Hohlräume beeinflusst. Der Hohlraumanteil beeinflusst
+damit die Rohdichte und das Gewicht eines einzelnen Steins.
+
+
+Ein geringes Stückgewicht bei gleichzeitig großem Volumen kann die
+ständigen Lasten aus Eigengewicht reduzieren und die Arbeitsleistung bei
+der Herstellung erhöhen.
+
+
+\subsection{Frostbeständigkeit}
+
+Die Frostbeständigkeit beeinflusst wesentlich das Einsatzgebiet eines
+Mauersteins. Bereits bei der Planung müssen die Exposition und ein
+möglicher Frostangriff berücksichtigt werden, damit spätere Schäden am
+Bauwerk vermieden werden.
+
+
+Ob ein Stein frostbeständig ist, muss durch eine eigene Prüfung
+nachgewiesen werden. Frostbeständige Steine sind beispielsweise
+Klinker, Vormauerziegel sowie bestimmte Kalksand- und Hüttensteine.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Rohdichte, Druckfestigkeit, Stückgewicht und Frostbeständigkeit sind
+zentrale Eigenschaften von Mauersteinen. Sie beeinflussen sowohl die
+bauphysikalische Eignung als auch die Tragfähigkeit und Verarbeitung.
+
+\end{merksatzbox}
+
+\section{Mauersteinformate und Steinformen}
+
+Die häufig verwendeten Steinformate mit festen Abmessungen sind das
+Dünnformat \texttt{DF} und das Normalformat \texttt{NF}.
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.30\textwidth}
+  >{\centering\arraybackslash}p{0.42\textwidth}
+}
+\toprule
+\textbf{Format} &
+\textbf{Nennmaß: Länge $\times$ Breite $\times$ Höhe} \\
+\midrule
+\endhead
+
+Dünnformat \texttt{DF} &
+$240 \times 115 \times 52\,\mathrm{mm}$ \\
+
+Normalformat \texttt{NF} &
+$240 \times 115 \times 71\,\mathrm{mm}$ \\
+
+\bottomrule
+\end{longtable}
+
+
+
+Mauersteine können verschiedene Formen besitzen. Diese ergeben sich aus
+unterschiedlichen Einsatzgebieten und technologischen Entwicklungen.
+
+\begin{itemize}
+  \item Vollstein,
+  \item Vollstein mit Griffschlitz,
+  \item Blockstein,
+  \item Hohlblockstein,
+  \item Langlochziegel,
+  \item Hochlochstein mit versetzten Stegen,
+  \item Hochlochstein mit durchlaufenden Stegen.
+\end{itemize}
+
+
+
+\section{Keramisch gebundene Steine: Ziegel}
+
+Ziegel können allgemein als \glqq gebrannte Erden\grqq{} bezeichnet
+werden. Der Brennvorgang bildet die gewünschten Eigenschaften aus oder
+verstärkt sie.
+
+
+Als Ausgangsmaterial dient Ton, vor allem jedoch Lehm. Lehm ist eine
+Mischung aus Sand, Ton und Schluff. Diese Bestandteile entstehen durch
+die Verwitterung von Gestein.
+
+
+Durch die Einlagerung von Wasser in die schichtig aufgebauten
+Tonminerale ist Lehm im feuchten Zustand gut formbar. Diese Eigenschaft
+ermöglicht die Herstellung unterschiedlicher Ziegelformen und Lochungen.
+
+
+Die Wasseraufnahme bewirkt zugleich, dass beim Brennen ein
+Schrumpfprozess einsetzt. Nicht bildsame Bestandteile wie Sand und Kalk
+wirken sich günstig auf das Trocknungs- und Schwindverhalten aus.
+
+
+\subsection{Porosierungsstoffe}
+
+Neben den natürlichen Rohstoffen können Porosierungsstoffe zugesetzt
+werden. Das Dokument nennt beispielsweise Sägespäne oder Schalen von
+Sonnenblumenkernen.
+
+
+Diese Stoffe verglühen beim Brennen und hinterlassen kleine
+luftgefüllte Hohlräume. Die erhöhte Porosität beeinflusst die
+bauphysikalischen Eigenschaften des fertigen Ziegels wesentlich.
+
+
+\subsection{Herstellung von Ziegeln}
+
+Der Brennvorgang ist der letzte Schritt der Ziegelherstellung. Dabei
+verliert der Ziegel zunächst sein gebundenes Wasser, sowohl
+physikalisch als auch chemisch gebundenes Wasser.
+
+
+Brenntemperatur und Gleichmäßigkeit des Brandes haben einen
+wesentlichen Einfluss auf die Eigenschaften des Ziegels.
+
+
+Ab ungefähr folgender Temperatur kommt es zur Neubildung von
+Kristallen:
+
+\begin{equation}
+  800\,^\circ\mathrm{C}
+\end{equation}
+
+Die neu gebildeten Kristalle vernetzen sich und geben dem Ziegel
+Festigkeit und Zusammenhalt.
+
+
+Bei Temperaturen von ungefähr
+
+\begin{equation}
+  1000 \text{ bis } 1300\,^\circ\mathrm{C}
+\end{equation}
+
+weichen sich Tonminerale an der Ziegeloberfläche auf und verschmelzen
+miteinander. Dadurch wird die Wasseraufnahmefähigkeit vermindert.
+Dieser Vorgang wird Sintern beziehungsweise Dichtbrennen genannt.
+
+
+Feuerfeste Erzeugnisse werden bei Temperaturen zwischen
+
+\begin{equation}
+  1300 \text{ und } 1800\,^\circ\mathrm{C}
+\end{equation}
+
+gebrannt. Sie werden beispielsweise für Kamine und Ofenverkleidungen
+verwendet.
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Brennen von Ziegeln}
+
+Beim Brennen verliert der Ziegel zunächst physikalisch und chemisch
+gebundenes Wasser. Ab etwa $800\,^\circ\mathrm{C}$ bilden sich neue
+Kristalle, die dem Ziegel Festigkeit und Zusammenhalt verleihen.
+
+Bei etwa $1000$ bis $1300\,^\circ\mathrm{C}$ können die
+Tonminerale an der Oberfläche aufweichen und miteinander
+verschmelzen. Dieser Prozess wird als Sintern oder Dichtbrennen
+bezeichnet und vermindert die Wasseraufnahmefähigkeit.
+
+Feuerfeste keramische Erzeugnisse werden bei Temperaturen von etwa
+$1300$ bis $1800\,^\circ\mathrm{C}$ hergestellt.
+\end{darstellungsbox}
+
+\subsection{Tunnelofen}
+
+Früher wurden Ringöfen verwendet. Dabei hing die Ziegelqualität stark
+vom Ort des Ziegels innerhalb des Ofens ab, weil Brenntemperatur und
+Dauer der Einwirkung der Maximaltemperatur unterschiedlich waren.
+
+
+Heute werden Tunnelöfen verwendet. Die Ziegel werden auf einem
+Förderband durch den Ofen transportiert. Die Befeuerung liegt in der
+Mitte des Tunnels. Dadurch erfolgen Temperaturanstieg und
+Temperaturabfall langsam und schrittweise.
+
+
+Durch den kontrollierten Temperaturverlauf werden Zwangsspannungen und
+die Gefahr von Spannungsrissen reduziert.
+
+
+\section{Mineralisch gebundene Steine}
+
+Mineralisch gebundene Steine unterscheiden sich von Ziegeln dadurch,
+dass nicht die gesamte Masse einem Brennprozess unterzogen wird.
+Üblicherweise wird das Bindemittel als gebranntes Erzeugnis zugesetzt.
+In manchen Fällen kann auch die Körnung gebrannt sein.
+
+
+Zu den mineralisch gebundenen Steinen zählen unter anderem
+Kalksandsteine, Porenbetonsteine, Hüttensteine und Betonsteine.
+
+
+\subsection{Kalksandsteine}
+
+Kalksandsteine bestehen aus Kalk, kieselsäurehaltigem Sand und Wasser.
+Das Wasser dient zum Ablöschen des gebrannten Kalks.
+
+
+Das Gemisch wird unter Druck zu Rohlingen geformt. Anschließend müssen
+die Rohlinge gehärtet werden. Die Härtung erfolgt in Autoklaven bei
+einem Dampfdruck von ungefähr:
+
+\begin{equation}
+  16 \text{ bis } 21\,\mathrm{bar}
+\end{equation}
+
+und einer Temperatur zwischen:
+
+\begin{equation}
+  160 \text{ und } 250\,^\circ\mathrm{C}
+\end{equation}
+
+
+
+Der hochgespannte Dampf schließt Kieselsäure an der Oberfläche der
+Sandkörner chemisch auf. Dadurch verbindet sich Kalk mit den
+Zuschlägen. Die entstehenden Kalkhydrosilikate sind wasserbeständig und
+weisen hohe Festigkeiten auf.
+
+
+\subsection{Porenbeton}
+
+Porenbeton wird auch Gasbeton genannt. Seine Hauptbestandteile sind
+feingemahlener Quarzsand, Bindemittel wie Zement oder Kalk, Wasser sowie
+ein Treibmittel. Als Treibmittel wird meist Aluminiumpulver verwendet.
+
+
+Zusätzlich können Gips oder Anhydrit zugesetzt werden, um den
+Produktionsablauf zu steuern.
+
+
+Das flüssige Gemisch wird in Formen gegossen. Das Treibmittel reagiert
+mit Calciumhydroxid und bildet Wasserstoffgas. Dadurch geht die Masse
+auf und es entsteht eine poröse Struktur.
+
+
+Nach dem Aufgehen kann der Porenbeton auf die gewünschte Größe
+geschnitten und anschließend im Autoklav dampfgehärtet werden.
+
+
+\section{Mauermörtel}
+
+Mörtel ist eine Mischung aus anorganischen Bindemitteln, Zuschlägen und
+Wasser. Zusatzstoffe und Zusatzmittel können gegebenenfalls enthalten
+sein.
+
+
+Mauermörtel verbindet Mauersteine kraftschlüssig zu einem Mauerwerk. Er
+ermöglicht dadurch die Aufnahme und Ableitung von Druck-, Zug- und
+Momentenbeanspruchungen.
+
+
+Zusätzlich dient Mauermörtel als vollflächiges Lager zwischen den
+Mauersteinen. Dadurch trägt er zu Feuchtigkeits-, Wärme-, Schall- und
+Brandschutz bei.
+
+
+Mörtel gleicht außerdem Maßabweichungen der Mauersteine aus. Je geringer
+die Fugendicke ist, desto höher sind die Anforderungen an die
+Maßgenauigkeit der Steine.
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.34\textwidth}
+  >{\raggedright\arraybackslash}p{0.46\textwidth}
+}
+\toprule
+\textbf{Mörtelart nach Bindemittel} &
+\textbf{Erhärtungsverhalten} \\
+\midrule
+\endhead
+
+Kalkmörtel &
+Nicht hydraulisch. \\
+
+Lehmmörtel &
+Nicht hydraulisch. \\
+
+Gipsmörtel &
+Nicht hydraulisch. \\
+
+Zementmörtel &
+Hydraulisch. \\
+
+Kalkzementmörtel &
+Hydraulisch. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+Hydraulische Mörtel benötigen das Wasser aus der Mörtelmischung zum
+Erhärten. Nicht hydraulische Mörtel trocknen und erhärten an der Luft.
+
+
+\subsection{Fugendicken}
+
+Mauermörtel wird üblicherweise in einer Schichtdicke von etwa
+\(1\) bis \(2\,\mathrm{cm}\) aufgetragen.
+
+
+Dünnbettmörtel besitzt eine maximale Schichtdicke von:
+
+\begin{equation}
+  3\,\mathrm{mm}
+\end{equation}
+
+Er wird daher auch als Klebemörtel bezeichnet.
+
+
+Dünnbettmörtel wird insbesondere bei Gasbeton, Kalksandstein und plan
+geschliffenen Steinen verwendet. Dies setzt geringe Abweichungen der
+Steinabmessungen voraus.
+
+
+\section{Klassifizierung von Mauerwerk}
+
+Mauerwerk kann nach verschiedenen Gesichtspunkten klassifiziert werden.
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.30\textwidth}
+  >{\raggedright\arraybackslash}p{0.50\textwidth}
+}
+\toprule
+\textbf{Kriterium} &
+\textbf{Einteilung} \\
+\midrule
+\endhead
+
+Steine &
+Natursteinmauerwerk oder Ziegelmauerwerk. \\
+
+Statische Funktion &
+Tragend, nicht tragend, bewehrt, nicht bewehrt, aussteifende Wand oder
+Schubwand. \\
+
+Zusammensetzung &
+Trockenmauerwerk, Mörtelmauerwerk, homogenes oder inhomogenes
+Mauerwerk. \\
+
+Sichtbarkeit &
+Sichtmauerwerk, Verblendmauerwerk, verputztes oder wärmegedämmtes
+Mauerwerk. \\
+
+Art &
+Einschalige Wand, zweischalige Wand oder Verbundwand. \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\subsection{Tragendes und nicht tragendes Mauerwerk}
+
+Eine tragende Wand ist dafür vorgesehen, neben dem Eigengewicht auch
+Lasten aus anderen Bauteilen schadlos in den Untergrund oder in andere
+tragende Bauteile abzuleiten.
+
+
+Nicht tragende Mauerwerksbauteile müssen nur Eigenlasten und direkt auf
+sie aufgebrachte Lasten aufnehmen. Sie dienen beispielsweise als
+Raumtrennung, Ausfachung oder Verblendmauerwerk.
+
+
+\subsection{Einschalige, zweischalige und Verbundwände}
+
+Bei Verbundwänden ergänzt eine Dämmschicht die einschalige Wand. Die
+Wand übernimmt dabei Lastabtragung, Schallschutz und Wärmespeicherung,
+während die Dämmschicht die Dämmeigenschaften verbessert.
+
+
+Bei zweischaligen Wänden sind die Funktionen getrennt:
+
+\begin{itemize}
+  \item Die Innenschale ist das tragende Element.
+  \item Die Zwischenschicht übernimmt die Dämmfunktion.
+  \item Die Außenschale übernimmt Witterungs- und Frostschutz.
+\end{itemize}
+
+
+
+\section{Druckfestigkeit von Mauerwerk}
+
+Die Tragfähigkeit von Mauerwerk unter Druckbeanspruchung ist im
+Vergleich zu anderen Beanspruchungsarten am höchsten. Mauerwerk wird
+daher vor allem für druckbeanspruchte Bauteile verwendet.
+
+
+Mauerwerk ist ein zusammengesetzter Baustoff aus mehreren Materialien
+mit unterschiedlichen Eigenschaften. Das Bruchbild ist daher komplex.
+Ein Bruch erfolgt im Allgemeinen durch Versagen der Mauersteine infolge
+vertikaler Spaltzugrisse.
+
+
+Die tatsächlich ableitbare Druckspannung wird unter anderem beeinflusst
+durch:
+
+\begin{itemize}
+  \item Feuchtezustand,
+  \item Lagerfugendicke,
+  \item Lochbild des Steins,
+  \item Ausführungsqualität.
+\end{itemize}
+
+
+
+Die Druckfestigkeit des Mauerwerks kann vereinfacht mit folgender
+Gleichung ermittelt werden:
+
+\begin{equation}
+  f_k =
+  K \cdot f_b^a \cdot f_m^b
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item \(f_k\): Druckfestigkeit des Mauerwerksverbands in
+  \(\mathrm{MPa}\),
+  \item \(f_b\): Steindruckfestigkeit in \(\mathrm{MPa}\),
+  \item \(f_m\): Mörteldruckfestigkeit in \(\mathrm{MPa}\),
+  \item \(K\), \(a\), \(b\): Beiwerte abhängig von Mauerstein und
+  Mörtel.
+\end{itemize}
+
+
+
+\section{Schubfestigkeit von Mauerwerk}
+
+Bei Schub- und Scherbeanspruchung kann zwischen Scheibenbeanspruchung
+und Plattenbeanspruchung unterschieden werden.
+
+
+Die Art des Versagens hängt von der vorhandenen Druckspannung im
+Mauerwerk ab:
+
+\begin{itemize}
+  \item Bei geringer Druckspannung können Lager- und Stoßfugen
+  versagen.
+  \item Bei hoher Druckspannung kann ein kombiniertes Versagen von
+  Stoßfugen und Steinen auftreten.
+  \item Bei sehr hoher Druckspannung kann reines Steinversagen
+  auftreten.
+\end{itemize}
+
+
+
+Die Schubfestigkeit von Mauerwerk wird durch die Festigkeitseigenschaften
+der Mauersteine, die Verbundfestigkeit und die Ausführungsqualität
+beeinflusst.
+
+
+Für vollständig vermörtelte Fugen lautet die Berechnung der
+Schubfestigkeit:
+
+\begin{equation}
+  f_{vk} =
+  f_{vko} + 0{,}4 \cdot \sigma_d
+  \leq
+  0{,}065 \cdot f_b
+\end{equation}
+
+Für knirsch gestoßene Stirnflächen lautet sie:
+
+\begin{equation}
+  f_{vk} =
+  0{,}5 \cdot f_{vko} + 0{,}4 \cdot \sigma_d
+  \leq
+  0{,}045 \cdot f_b
+\end{equation}
+
+Dabei bedeuten:
+
+\begin{itemize}
+  \item \(f_{vk}\): Schubfestigkeit in \(\mathrm{MPa}\),
+  \item \(f_{vko}\): Anfangsscherfestigkeit, abhängig vom Mörtel,
+  \item \(\sigma_d\): Druckspannung in \(\mathrm{MPa}\),
+  \item \(f_b\): Steindruckfestigkeit.
+\end{itemize}
+
+
+
+\section{Elastizitätsmodul von Mauerwerk}
+
+Der Elastizitätsmodul beschreibt die Beziehung zwischen Spannung und
+Dehnung eines Materials. Für Mauerwerk wird der E-Modul nach der
+folgenden Beziehung berechnet:
+
+\begin{equation}
+  E =
+  1000 \cdot f_k
+\end{equation}
+
+Dabei ist \(f_k\) die Druckfestigkeit des Mauerwerks.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Die Mauerwerksdruckfestigkeit hängt von der Steindruckfestigkeit, der
+Mörteldruckfestigkeit und von material- und mörtelabhängigen
+Beiwerten ab. Die Schubfestigkeit wird zusätzlich durch die
+Druckspannung, die Verbundfestigkeit und die Ausführungsqualität
+beeinflusst.
+\quelle{[16][17]}
+\end{merksatzbox}
+% =================================================
+% KAPITEL 10: NEUE, BIOBASIERTE UND
+% KREISLAUFFÄHIGE MATERIALIEN
+% Diesen gesamten Block vor \end{document} einfügen.
+% =================================================
+
+\chapter{Neue, biobasierte und kreislauffähige Materialien}
+
+\section{Kreislauffähige Baustoffe und Rezyklate}
+
+Das Dokument behandelt Rezyklate als ``Baustoff der Zukunft''. Dabei
+werden Beispiele für die Materialaufbereitung angeführt.
+
+
+Die im Dokument dargestellten Beispiele beziehen sich auf die
+Materialaufbereitung durch Hengl in Maissau sowie auf eine
+Materialaufbereitung in Wien.
+
+
+Rezyklate stehen im Zusammenhang mit der Wiederverwendung und
+Aufbereitung von Baustoffen. Im Straßenbau werden beispielsweise
+rezyklierte Gesteinskörnungen für ungebundene Tragschichten genannt.
+Ungebundene Tragschichten können aus natürlichen, industriell
+hergestellten und rezyklierten Gesteinskörnungen bestehen.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Rezyklate werden im Dokument als Baustoff der Zukunft bezeichnet.
+Rezyklierte Gesteinskörnungen können unter anderem für ungebundene
+Tragschichten im Straßenbau verwendet werden.
+
+\end{merksatzbox}
+
+\section{Rezyklierte Gesteinskörnungen im Straßenbau}
+
+Ungebundene Tragschichten bestehen aus Gemischen von
+Gesteinskörnungen. Das Dokument nennt dafür natürliche, industriell
+hergestellte und rezyklierte Gesteinskörnungen.
+
+
+Die wesentlichen Anforderungen an ungebundene Tragschichten betreffen
+insbesondere:
+
+\begin{itemize}
+  \item Tragfähigkeit,
+  \item Frostsicherheit,
+  \item Verdichtbarkeit,
+  \item Verdichtungsgrad.
+\end{itemize}
+
+
+
+Die Tragfähigkeit wird über den Verformungsmodul $E_{v1}$ im
+Lastplattenversuch beurteilt. Die Frostsicherheit wird über
+Korngrößen- und Mineralkriterien sowie über Frosthebungsversuche
+beurteilt.
+
+
+\begin{darstellungsbox}
+\textbf{Darstellung: Rezyklate als Baustoff}
+
+Die Darstellung zeigt die Materialaufbereitung von Rezyklaten. Der
+Begriff Rezyklate wird dabei im Dokument als Teil des Themenbereichs
+``Baustoff der Zukunft'' verwendet.
+
+Für den Straßenbau nennt das Dokument rezyklierte Gesteinskörnungen als
+möglichen Bestandteil ungebundener Tragschichten. Dabei müssen die
+Anforderungen an Tragfähigkeit, Frostsicherheit, Verdichtbarkeit und
+Verdichtungsgrad erfüllt werden.
+\end{darstellungsbox}
+
+\section{Stampflehm}
+
+Stampflehm wird im Dokument als Lehmbaustoff behandelt. Die
+Zusammensetzung von Lehm wird mit folgenden Bestandteilen angegeben:
+
+\begin{itemize}
+  \item Ton,
+  \item Schluff,
+  \item Sand,
+  \item Kies.
+\end{itemize}
+
+
+
+Für Stampflehm verweist das Dokument auf Erfahrungswerte gemäß dem
+``Design Guide für Stampflehm'' von Erden.
+
+
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.31\textwidth}
+  >{\raggedright\arraybackslash}p{0.49\textwidth}
+}
+\toprule
+\textbf{Bestandteil} &
+\textbf{Zuordnung} \\
+\midrule
+\endhead
+
+Ton &
+Bestandteil von Lehm \\
+
+Schluff &
+Bestandteil von Lehm \\
+
+Sand &
+Bestandteil von Lehm \\
+
+Kies &
+Bestandteil von Lehm \\
+
+\bottomrule
+\end{longtable}
+
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Stampflehm besteht aus Lehm. Als Bestandteile von Lehm nennt das
+Dokument Ton, Schluff, Sand und Kies.
+
+\end{merksatzbox}
+
+\section{Zusammenfassung}
+
+Die vorliegenden Dokumentauszüge behandeln Rezyklate als Baustoff der
+Zukunft und zeigen deren Materialaufbereitung. Im Straßenbau können
+rezyklierte Gesteinskörnungen in ungebundenen Tragschichten eingesetzt
+werden. \quelle{[1][^3]}
+
+Als weiterer Werkstoff wird Stampflehm genannt. Dieser basiert auf Lehm
+mit den Bestandteilen Ton, Schluff, Sand und Kies.
+
+
+\begin{merksatzbox}
+\textbf{Merksatz:}
+Kreislauffähige Baustoffe umfassen im Dokument insbesondere Rezyklate.
+Als mineralischer Lehmbaustoff wird Stampflehm mit den Bestandteilen
+Ton, Schluff, Sand und Kies behandelt.
+\quelle{[1][^2]}
+\end{merksatzbox}
+\end{document}
